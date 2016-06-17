@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style-vis.css"/>
+    <script type="text/javascript" src="client/lib/head.load.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    head.js(
+         // External libraries
+         'client/lib/jquery.min.js',
+         'client/lib/jquery.svg.min.js',
+         'client/lib/jquery.svgdom.min.js',
+
+         // brat helper modules
+         'client/src/configuration.js',
+         'client/src/util.js',
+         'client/src/annotation_log.js',
+         'client/lib/webfont.js',
+
+         // brat modules
+         'client/src/dispatcher.js',
+         'client/src/url_monitor.js',
+         'client/src/visualizer.js'
+    );
+
+     var webFontURLs = [
+         'static/fonts/Astloch-Bold.ttf',
+         'static/fonts/PT_Sans-Caption-Web-Regular.ttf',
+         'static/fonts/Liberation_Sans-Regular.ttf'
+     ];
+
+     var collData = {
+         entity_types: [ {
+            type   : 'Person',
+            /* The labels are used when displaying the annotion, in this case
+            we also provide a short-hand "Per" for cases where
+            abbreviations are preferable */
+            labels : ['Person', 'Per'],
+            // Blue is a nice colour for a person?
+            bgColor: '#7fa2ff',
+            // Use a slightly darker version of the bgColor for the border
+            borderColor: 'darken'
+         }  ],
+         entity_attribute_types: [
+             {
+                 type  : 'Notorious',
+                 /* brat supports multi-valued attributes, but in our case we will only
+                 use a single value and add a glyph to the visualisation to indicate
+                 that the entity carries that attribute */
+                 values: { 'Notorious': { 'glyph': '★' } }
+             },
+             {
+                 "values": {
+                     "Positive": {
+                         "box": "none",
+                         "glyph": "[Polarity:true]",
+                         "dashArray": "1,2" //Incertitude
+                     },
+                     "Negative": {
+                         "box": "crossed",
+                         "glyph": "[Polarity:false]",
+                         "dashArray": "3,4" //Incertitude
+                     }
+                 },
+                 "type": "Polarity",
+                 "name": "Polarity"
+             }
+         ],
+         relation_types: [
+             {
+                 type     : 'Anaphora',
+                 labels   : ['Anaphora', 'Ana'],
+                 // dashArray allows you to adjust the style of the relation arc
+                 dashArray: '3,3',
+                 color    : 'purple',
+                 /* A relation takes two arguments, both are named and can be constrained
+                  as to which types they may apply to */
+                 args     : [
+                     //
+                     {role: 'Anaphor', targets: ['Person'] },
+                     {role: 'Entity',  targets: ['Person'] }
+                 ]
+             }
+         ],
+         event_types: [
+             {
+                 type   : 'Assassination',
+                 labels : ['Assassination', 'Assas'],
+                 bgColor: 'lightgreen',
+                 borderColor: 'darken',
+                 /* Unlike relations, events originate from a span of text and can take
+                  several arguments */
+                 arcs   : [
+                     {type: 'Victim', labels: ['Victim','Vict'] },
+                     // Just like the event itself, its arguments can be styled
+                     {type: 'Perpetrator', labels: ['Perpetrator','Perp'], color: 'green' }
+                 ]
+             }
+         ]
+    };
+
+    var docData = {
+        // Our text of choice
+        text     : "Ed O'Kelley was the man who shot the man who shot Jesse James.\nJe suis revenu.",
+        // The entities entry holds all entity annotations
+        entities : [
+            /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
+             note that range of the offsets are [${START},${END}) */
+            ['T1', 'Person', [[0, 11]]],
+            ['T2', 'Person', [[20, 23]]],
+            ['T3', 'Person', [[37, 40]]],
+            ['T4', 'Person', [[50, 61]]],
+        ],
+        attributes: [
+            // Format: [${ID}, ${TYPE}, ${TARGET}, ${VALUE}]
+            ['A1', 'Notorious', 'T4'],
+            ['A2', 'Polarity', 'T1', 'Positive']
+        ],
+        relations: [
+            // Format: [${ID}, ${TYPE}, [[${ARGNAME}, ${TARGET}], [${ARGNAME}, ${TARGET}]]]
+            ['R1', 'Anaphora', [['Anaphor', 'T2'], ['Entity', 'T1']]]
+        ],
+        triggers: [
+            // The format is identical to that of entities
+            ['T5', 'Assassination', [[45, 49]]],
+            ['T6', 'Assassination', [[28, 32]]]
+        ],
+        events: [
+            // Format: [${ID}, ${TRIGGER}, [[${ARGTYPE}, ${ARGID}], ...]]
+            ['E1', 'T5', [['Perpetrator', 'T3'], ['Victim', 'T4']]],
+            ['E2', 'T6', [['Perpetrator', 'T2'], ['Victim', 'T3']]]
+        ]
+    };
+
+    head.ready(function() {
+        var dispatcher = new Dispatcher();
+        var visualizer = new Visualizer(dispatcher, 'brat-standalone-test', webFontURLs);
+        docData.collection = null;
+        dispatcher.post('collectionLoaded', [collData]);
+        dispatcher.post('requestRenderData', [docData]);
+
+        setTimeout(function(){
+            docData.entities[0] = ['T1', 'Person', [[0, 17]]];
+            dispatcher.post('requestRenderData', [docData]);
+        }, 3000);
+
+        setTimeout(function(){
+            docData.entities[0] = ['T1', 'Person', [[0, 27]]];
+            dispatcher.post('renderData', [docData]);
+        }, 10000);
+
+        return dispatcher;
+
+        /*Util.embed(
+                // id of the div element where brat should embed the visualisations
+                'brat-standalone-test',
+                // object containing collection data
+                collData,
+                // object containing document data
+                docData,
+                // Array containing locations of the visualisation fonts
+                webFontURLs
+        );*/
+    });
+</script>
+    <div id="main"></div>
+    <div id="brat-standalone-test" style="display: block; height: 49.9844px;"></div>
+</body>
+</html>

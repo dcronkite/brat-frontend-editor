@@ -1,0 +1,31 @@
+{
+  "action": "getDocument",
+  "messages": [],
+  "source_files": ["ann", "txt"],
+  "modifications": [],
+  "normalizations": [],
+  "ctime": 1351154734.5055847,
+  "text"     : "Ed O'Kelley was the man who shot the man who shot Jesse James.\nJe suis revenu en un seul morceau de ce voyage fantastique.",
+  "entities" : [
+    ["T1", "Person", [[0, 2], [5, 11]]],
+    ["T2", "Person", [[20, 23]]],
+    ["T3", "Person", [[37, 40]]],
+    ["T4", "Person", [[50, 61], [45, 49]]]
+  ],
+  "attributes": [
+    ["A1", "Notorious", "T4"],
+    ["A2", "Polarity", "T1", "Positive"],
+    ["A3", "Polarity", "T2", "Negative"]
+  ],
+  "relations": [
+    ["R1", "Anaphora", [["Anaphor", "T2"], ["Entity", "T1"]]]
+  ],
+  "triggers": [
+    ["T5", "Assassination", [[45, 49]]],
+    ["T6", "Assassination", [[28, 32]]]
+  ],
+  "events": [
+    ["E1", "T5", [["Perpetrator", "T3"], ["Victim", "T4"]]],
+    ["E2", "T6", [["Perpetrator", "T2"], ["Victim", "T3"]]]
+  ]
+}

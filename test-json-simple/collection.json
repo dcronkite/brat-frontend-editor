@@ -1,0 +1,122 @@
+{
+  "action": "getCollectionInformation",
+  "messages": [],
+  "items": [],
+  "search_config": [
+    ["Google", "http://www.google.com/search?q=%s"],
+    ["Wikipedia", "http://en.wikipedia.org/wiki/Special:Search?search=%s"],
+    ["UniProt", "http://www.uniprot.org/uniprot/?sort=score&query=%s"],
+    ["EntrezGene", "http://www.ncbi.nlm.nih.gov/gene?term=%s"],
+    ["GeneOntology", "http://amigo.geneontology.org/cgi-bin/amigo/search.cgi?search_query=%s&action=new-search&search_constraint=term"],
+    ["ALC", "http://eow.alc.co.jp/%s"]
+  ],
+  "disambiguator_config": [],
+  "entity_types": [ {
+    "name": "Person",
+    "type"   : "Person",
+    "labels" : ["Person", "Per"],
+    "bgColor": "#7fa2ff",
+    "borderColor": "darken",
+    "children": [],
+    "unused": false,
+    "attributes": [
+      "Notorious", "Polarity"
+    ],
+    "arcs": [{
+      "arrowHead": "triangle,5",
+      "color": "black",
+      "labels": ["Aroow", "Arr"],
+      "dashArray": ",",
+      "hotkey": "T",
+      "type": "Protein",
+      "targets": ["Protein", "Assassination"]
+    }]
+  },
+  {
+    "name": "Object",
+    "type"   : "Object",
+    "labels" : ["Object", "Obj"],
+    "bgColor": "#7fa2ff",
+    "borderColor": "darken",
+    "attributes": [
+      "Notorious", "Polarity"
+    ],
+    "children": [],
+    "unused": false,
+    "arcs": [{
+      "arrowHead": "triangle,5",
+      "color": "black",
+      "labels": ["Aroow", "Arr"],
+      "dashArray": ",",
+      "hotkey": "T",
+      "type": "Protein",
+      "targets": ["Protein", "Assassination"]
+    }]
+  }],
+  "entity_attribute_types": [
+    {
+      "name": "Notorious",
+      "type"  : "Notorious",
+      "values": { "Notorious": { "glyph": "★" } }
+    },
+    {
+      "type": "Polarity",
+      "name": "Polarity",
+      "values": {
+        "Positive": {
+          "box": "none",
+          "glyph": "\n[Polarity:true]",
+          "dashArray": "1,2"
+        },
+        "Negative": {
+          "box": "crossed",
+          "glyph": "\n[Polarity:false]",
+          "dashArray": "3,4"
+        }
+      }
+    }
+  ],
+  "relation_types": [
+    {
+      "type"     : "Anaphora",
+      "labels"   : ["Anaphora", "Ana"],
+      "dashArray": "3,3",
+      "color"    : "purple",
+      "args"     : [
+        {"role": "Anaphor", "targets": ["Person"] },
+        {"role": "Entity",  "targets": ["Person"] }
+      ]
+    }
+  ],
+  "event_types": [
+    {
+      "name": "Assassination",
+      "type"   : "Assassination",
+      "labels" : ["Assassination", "Assas"],
+      "bgColor": "lightgreen",
+      "borderColor": "darken",
+      "arcs": [{
+        "arrowHead": "triangle,5",
+        "color": "black",
+        "labels": ["Theme", "Th"],
+        "dashArray": ",",
+        "hotkey": "T",
+        "type": "Theme",
+        "targets": ["Amino_acid_monomer", "Body_region", "Carbohydrate", "Cell_component", "Cell_cultured", "Cell_natural", "DNA_domain_or_region", "DNA_family_or_group", "DNA_molecule", "DNA_substructure", "Element", "Inorganic_compound", "Lipid", "Multicellular_organism_genetically_modified", "Multicellular_organism_natural", "Nucleotide", "Organic_compound_other", "Peptide", "Polynucleotide", "Protein_complex", "Protein_domain_or_region", "Protein_family_or_group", "Protein_molecule", "Protein_substructure", "RNA_domain_or_region", "RNA_family_or_group", "RNA_molecule", "RNA_substructure", "Tissue_cultured", "Tissue_natural", "Unicellular_organism", "Virus", "Other", "Polarity-Cue", "KT-Cue", "CL-Cue", "Manner-Cue", "Source-Cue", "Artificial_process", "Binding", "Biological_process", "Cell_adhesion", "Cell_communication", "Cell_differentiation", "Cell_recognition", "Cellular_physiological_process", "Cellular_process", "Correlation", "DNA_metabolism", "DNA_modification", "DNA_recombination", "Gene_expression", "Initiation_of_viral_infection", "Localization", "Metabolism", "Molecular_Function", "Mutagenesis", "Physiological_process", "Protein_amino_acid_acetylation", "Protein_amino_acid_deacetylation", "Protein_amino_acid_dephosphorylation", "Protein_amino_acid_phosphorylation", "Protein_catabolism", "Protein_metabolism", "Protein_modification", "Protein_processing", "Protein_ubiquitination", "RNA_metabolism", "Transcription", "Translation", "Viral_life_cycle", "Regulation", "Negative_regulation", "Positive_regulation"]
+      }, {
+        "arrowHead": "triangle,5",
+        "color": "black",
+        "labels": ["Cue"],
+        "dashArray": ",",
+        "type": "Cue",
+        "targets": ["Polarity-Cue", "KT-Cue", "CL-Cue", "Manner-Cue", "Source-Cue"]
+      }],
+      "children": [],
+      "unused": false,
+      "arcs"   : [
+        {"type": "Victim", "labels": ["Victim","Vict"] },
+        {"type": "Perpetrator", "labels": ["Perpetrator","Perp"], "color": "green" }
+      ]
+    }
+  ]
+}

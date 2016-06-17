@@ -1,0 +1,7 @@
+{
+  "action": "login",
+  "messages": [
+    ["Hello amigo!", "comment", 3]
+  ],
+  "protocol": 1
+}

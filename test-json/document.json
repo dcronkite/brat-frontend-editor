@@ -1,0 +1,1171 @@
+{
+  "modifications": [],
+  "normalizations": [],
+  "ctime": 1351154734.5055847,
+  "triggers": [
+    ["T89", "Transcription", [
+      [21, 40]
+    ]],
+    ["T90", "Gene_expression", [
+      [45, 55]
+    ]],
+    ["T91", "Transcription", [
+      [21, 40]
+    ]],
+    ["T92", "Gene_expression", [
+      [45, 55]
+    ]],
+    ["T93", "UNCLASSIFIED", [
+      [162, 171]
+    ]],
+    ["T94", "UNCLASSIFIED", [
+      [219, 229]
+    ]],
+    ["T95", "Regulation", [
+      [414, 421]
+    ]],
+    ["T97", "Regulation", [
+      [365, 374]
+    ]],
+    ["T98", "Initiation_of_viral_infection", [
+      [304, 315]
+    ]],
+    ["T99", "Viral_life_cycle", [
+      [350, 361]
+    ]],
+    ["T100", "Regulation", [
+      [365, 374]
+    ]],
+    ["T102", "Regulation", [
+      [414, 421]
+    ]],
+    ["T103", "Transcription", [
+      [457, 470]
+    ]],
+    ["T105", "Gene_expression", [
+      [506, 516]
+    ]],
+    ["T106", "Positive_regulation", [
+      [557, 565]
+    ]],
+    ["T107", "Binding", [
+      [741, 745]
+    ]],
+    ["T108", "Regulation", [
+      [837, 846]
+    ]],
+    ["T110", "Regulation", [
+      [837, 846]
+    ]],
+    ["T112", "Positive_regulation", [
+      [865, 873]
+    ]],
+    ["T113", "Physiological_process", [
+      [903, 913]
+    ]],
+    ["T114", "Physiological_process", [
+      [903, 913]
+    ]],
+    ["T115", "Binding", [
+      [1051, 1058]
+    ]],
+    ["T117", "Binding", [
+      [1051, 1058]
+    ]],
+    ["T118", "Binding", [
+      [1051, 1058]
+    ]],
+    ["T119", "Positive_regulation", [
+      [1127, 1151]
+    ]],
+    ["T121", "Positive_regulation", [
+      [1127, 1151]
+    ]],
+    ["T122", "Protein_amino_acid_phosphorylation", [
+      [1152, 1166]
+    ]],
+    ["T123", "Positive_regulation", [
+      [1267, 1273],
+      [1281, 1289]
+    ]],
+    ["T124", "Protein_amino_acid_dephosphorylation", [
+      [1333, 1349]
+    ]],
+    ["T125", "Correlation", [
+      [1481, 1491]
+    ]],
+    ["T127", "Correlation", [
+      [1481, 1491]
+    ]],
+    ["T128", "Transcription", [
+      [1497, 1516]
+    ]],
+    ["T129", "Regulation", [
+      [1729, 1737]
+    ]],
+    ["T131", "Transcription", [
+      [1751, 1764]
+    ]],
+    ["T132", "Regulation", [
+      [1729, 1737]
+    ]],
+    ["T133", "Protein_amino_acid_phosphorylation", [
+      [1860, 1875]
+    ]],
+    ["T134", "Binding", [
+      [1880, 1887]
+    ]],
+    ["T135", "Protein_amino_acid_phosphorylation", [
+      [1860, 1875]
+    ]],
+    ["T136", "Binding", [
+      [1880, 1887]
+    ]],
+    ["T137", "Transcription", [
+      [2013, 2026]
+    ]],
+    ["T139", "Positive_regulation", [
+      [2092, 2116]
+    ]],
+    ["T142", "Positive_regulation", [
+      [2134, 2141]
+    ]],
+    ["T143", "Transcription", [
+      [2142, 2147],
+      [2155, 2168]
+    ]],
+    ["T144", "Positive_regulation", [
+      [2173, 2180]
+    ]],
+    ["T145", "Viral_life_cycle", [
+      [2187, 2198]
+    ]],
+    ["T146", "Physiological_process", [
+      [2077, 2086]
+    ]]
+  ],
+  "text": "Comparison of HTLV-I basal transcription and expression of CREB/ATF-1/CREM family members in peripheral blood mononuclear cells and Jurkat T cells.\nHTLV-I is the etiologic agent of adult T-cell leukemia/lymphoma and is associated with tropical spastic paraparesis/HTLV-I-associated myelopathy.\nFollowing integration into the host cell genome, HTLV-I replication is regulated by both host and viral mechanisms that control transcription.\nLow levels of viral transcription (basal transcription) occur before expression of the virally encoded Tax protein (Tax-mediated transcription).\nMembers of the cyclic adenosine monophosphate (cAMP) response element binding (CREB)/activating transcription factor 1 (ATF-1) family of transcription factors bind three 21-bp repeats (Tax-responsive element-1, or TRE-1) within the viral promoter and are important for basal and Tax-mediated transcription.\nUsing mitogen stimulated and quiescent peripheral blood mononuclear cells (PBMC) and Jurkat cells, we compared differences in basal transcription and amounts and binding of transcription factors with TRE-1.\nWe demonstrate that amounts of transcriptionally active phosphorylated CREB protein (P-CREB) differ between activated PBMC and Jurkat cells.\nFollowing stimulation, P-CREB levels remain elevated in PBMC for up to 24 hours whereas CREB is dephosphorylated in Jurkat cells within 4 hours following stimulation.\nThe differences in P-CREB levels between PBMC and Jurkat cells were directly correlated with basal transcription of HTLV-I in the two cell types.\nUsing electrophoretic mobility shift assays, we determined that the pattern of band migration differed between the two cell types.\nThese data demonstrate that PBMC differentially regulate basal HTLV-I transcription compared with Jurkat T cells, and this differential regulation is due, in part to differential phosphorylation and binding of CREB/ATF-1 to TRE-1 in the HTLV-I promoter.\nWe demonstrate the utility of using primary lymphocyte models to study HTLV-I transcription in the context of cell signaling and suggest that activated PBMC maintain elevated levels of P-CREB, which promote basal HTLV-I transcription and enhance viral persistence in vivo.\n",
+  "source_files": ["ann", "txt"],
+  "mtime": 1351154734.5055847,
+  "messages": [],
+  "sentence_offsets": [
+    [0, 147],
+    [148, 293],
+    [294, 436],
+    [437, 581],
+    [582, 888],
+    [889, 1095],
+    [1096, 1236],
+    [1237, 1403],
+    [1404, 1549],
+    [1550, 1680],
+    [1681, 1934],
+    [1935, 2207]
+  ],
+  "relations": [],
+  "entities": [
+    ["T96", "Other", [
+      [392, 397],
+      [398, 408]
+    ]],
+    ["T101", "Other", [
+      [383, 387],
+      [398, 408]
+    ]],
+    ["T104", "Low-Cue", [
+      [437, 447]
+    ]],
+    ["T109", "Other", [
+      [851, 856],
+      [874, 887]
+    ]],
+    ["T111", "Other", [
+      [861, 873],
+      [874, 887]
+    ]],
+    ["T116", "Investigation-Cue", [
+      [991, 1014]
+    ]],
+    ["T120", "Analysis-Cue", [
+      [1099, 1110]
+    ]],
+    ["T126", "Analysis-Cue", [
+      [1481, 1491]
+    ]],
+    ["T130", "Analysis-Cue", [
+      [1692, 1703]
+    ]],
+    ["T138", "Investigation-Cue", [
+      [1997, 2005]
+    ]],
+    ["T140", "L2-Cue", [
+      [2064, 2071]
+    ]],
+    ["T141", "Analysis-Cue", [
+      [2064, 2071]
+    ]],
+    ["T1", "Other", [
+      [14, 55]
+    ]],
+    ["T3", "Virus", [
+      [14, 20]
+    ]],
+    ["T6", "Protein_family_or_group", [
+      [59, 89]
+    ]],
+    ["T7", "Cell_natural", [
+      [93, 127]
+    ]],
+    ["T8", "Cell_cultured", [
+      [132, 146]
+    ]],
+    ["T9", "Virus", [
+      [148, 154]
+    ]],
+    ["T10", "Other", [
+      [181, 211]
+    ]],
+    ["T11", "Other", [
+      [235, 292]
+    ]],
+    ["T12", "Virus", [
+      [264, 270]
+    ]],
+    ["T13", "Other", [
+      [325, 341]
+    ]],
+    ["T14", "Other", [
+      [343, 361]
+    ]],
+    ["T15", "DNA_domain_or_region", [
+      [343, 349]
+    ]],
+    ["T16", "Virus", [
+      [343, 349]
+    ]],
+    ["T17", "Other", [
+      [383, 408]
+    ]],
+    ["T21", "Other", [
+      [422, 435]
+    ]],
+    ["T22", "Other", [
+      [451, 470]
+    ]],
+    ["T23", "Other", [
+      [472, 491]
+    ]],
+    ["T24", "Protein_molecule", [
+      [524, 551]
+    ]],
+    ["T25", "Protein_molecule", [
+      [553, 556]
+    ]],
+    ["T26", "Other", [
+      [566, 579]
+    ]],
+    ["T27", "Protein_family_or_group", [
+      [597, 715]
+    ]],
+    ["T28", "DNA_domain_or_region", [
+      [597, 651]
+    ]],
+    ["T29", "Nucleotide", [
+      [597, 627]
+    ]],
+    ["T30", "Nucleotide", [
+      [629, 633]
+    ]],
+    ["T31", "Protein_family_or_group", [
+      [661, 665]
+    ]],
+    ["T32", "Protein_family_or_group", [
+      [702, 715]
+    ]],
+    ["T33", "Protein_molecule", [
+      [702, 707]
+    ]],
+    ["T34", "Protein_family_or_group", [
+      [719, 740]
+    ]],
+    ["T35", "DNA_domain_or_region", [
+      [752, 765]
+    ]],
+    ["T36", "DNA_domain_or_region", [
+      [767, 791]
+    ]],
+    ["T37", "DNA_domain_or_region", [
+      [796, 801]
+    ]],
+    ["T38", "DNA_domain_or_region", [
+      [814, 828]
+    ]],
+    ["T39", "Other", [
+      [851, 887]
+    ]],
+    ["T42", "Protein_molecule", [
+      [861, 864]
+    ]],
+    ["T43", "Other", [
+      [874, 887]
+    ]],
+    ["T44", "Organic_compound_other", [
+      [895, 902]
+    ]],
+    ["T45", "Cell_natural", [
+      [928, 962]
+    ]],
+    ["T46", "Cell_natural", [
+      [964, 968]
+    ]],
+    ["T47", "Cell_cultured", [
+      [974, 986]
+    ]],
+    ["T48", "Other", [
+      [1015, 1034]
+    ]],
+    ["T49", "Protein_family_or_group", [
+      [1062, 1083]
+    ]],
+    ["T50", "DNA_domain_or_region", [
+      [1089, 1094]
+    ]],
+    ["T51", "Protein_molecule", [
+      [1152, 1179]
+    ]],
+    ["T52", "Protein_molecule", [
+      [1167, 1179]
+    ]],
+    ["T53", "Protein_molecule", [
+      [1181, 1187]
+    ]],
+    ["T54", "Cell_natural", [
+      [1214, 1218]
+    ]],
+    ["T55", "Cell_cultured", [
+      [1223, 1235]
+    ]],
+    ["T56", "Other", [
+      [1260, 1273]
+    ]],
+    ["T57", "Protein_molecule", [
+      [1260, 1266]
+    ]],
+    ["T58", "Cell_natural", [
+      [1293, 1297]
+    ]],
+    ["T59", "Protein_molecule", [
+      [1325, 1329]
+    ]],
+    ["T60", "Cell_cultured", [
+      [1353, 1365]
+    ]],
+    ["T61", "Other", [
+      [1423, 1436]
+    ]],
+    ["T62", "Protein_molecule", [
+      [1423, 1429]
+    ]],
+    ["T63", "Cell_natural", [
+      [1445, 1449]
+    ]],
+    ["T64", "Cell_cultured", [
+      [1454, 1466]
+    ]],
+    ["T65", "Other", [
+      [1497, 1516]
+    ]],
+    ["T66", "DNA_domain_or_region", [
+      [1520, 1526]
+    ]],
+    ["T67", "Virus", [
+      [1520, 1526]
+    ]],
+    ["T68", "Other", [
+      [1556, 1593]
+    ]],
+    ["T69", "Cell_natural", [
+      [1709, 1713]
+    ]],
+    ["T70", "Other", [
+      [1744, 1764]
+    ]],
+    ["T71", "DNA_domain_or_region", [
+      [1744, 1750]
+    ]],
+    ["T72", "Virus", [
+      [1744, 1750]
+    ]],
+    ["T73", "Cell_cultured", [
+      [1779, 1793]
+    ]],
+    ["T74", "Protein_molecule", [
+      [1891, 1901]
+    ]],
+    ["T75", "DNA_domain_or_region", [
+      [1905, 1933]
+    ]],
+    ["T76", "DNA_domain_or_region", [
+      [1905, 1910]
+    ]],
+    ["T77", "Virus", [
+      [1918, 1924]
+    ]],
+    ["T78", "Other", [
+      [1971, 1996]
+    ]],
+    ["T79", "Other", [
+      [2006, 2026]
+    ]],
+    ["T80", "DNA_domain_or_region", [
+      [2006, 2012]
+    ]],
+    ["T81", "Virus", [
+      [2006, 2012]
+    ]],
+    ["T82", "Other", [
+      [2045, 2059]
+    ]],
+    ["T83", "Cell_natural", [
+      [2087, 2091]
+    ]],
+    ["T84", "Protein_molecule", [
+      [2120, 2126]
+    ]],
+    ["T85", "Other", [
+      [2148, 2168]
+    ]],
+    ["T86", "DNA_domain_or_region", [
+      [2148, 2154]
+    ]],
+    ["T87", "Virus", [
+      [2148, 2154]
+    ]],
+    ["T88", "Other", [
+      [2181, 2198]
+    ]]
+  ],
+  "comments": [],
+  "token_offsets": [
+    [0, 10],
+    [11, 13],
+    [14, 20],
+    [21, 26],
+    [27, 40],
+    [41, 44],
+    [45, 55],
+    [56, 58],
+    [59, 74],
+    [75, 81],
+    [82, 89],
+    [90, 92],
+    [93, 103],
+    [104, 109],
+    [110, 121],
+    [122, 127],
+    [128, 131],
+    [132, 138],
+    [139, 140],
+    [141, 147],
+    [148, 154],
+    [155, 157],
+    [158, 161],
+    [162, 171],
+    [172, 177],
+    [178, 180],
+    [181, 186],
+    [187, 193],
+    [194, 211],
+    [212, 215],
+    [216, 218],
+    [219, 229],
+    [230, 234],
+    [235, 243],
+    [244, 251],
+    [252, 281],
+    [282, 293],
+    [294, 303],
+    [304, 315],
+    [316, 320],
+    [321, 324],
+    [325, 329],
+    [330, 334],
+    [335, 342],
+    [343, 349],
+    [350, 361],
+    [362, 364],
+    [365, 374],
+    [375, 377],
+    [378, 382],
+    [383, 387],
+    [388, 391],
+    [392, 397],
+    [398, 408],
+    [409, 413],
+    [414, 421],
+    [422, 436],
+    [437, 440],
+    [441, 447],
+    [448, 450],
+    [451, 456],
+    [457, 470],
+    [471, 477],
+    [478, 492],
+    [493, 498],
+    [499, 505],
+    [506, 516],
+    [517, 519],
+    [520, 523],
+    [524, 531],
+    [532, 539],
+    [540, 543],
+    [544, 551],
+    [552, 565],
+    [566, 581],
+    [582, 589],
+    [590, 592],
+    [593, 596],
+    [597, 603],
+    [604, 613],
+    [614, 627],
+    [628, 634],
+    [635, 643],
+    [644, 651],
+    [652, 659],
+    [660, 677],
+    [678, 691],
+    [692, 698],
+    [699, 700],
+    [701, 708],
+    [709, 715],
+    [716, 718],
+    [719, 732],
+    [733, 740],
+    [741, 745],
+    [746, 751],
+    [752, 757],
+    [758, 765],
+    [766, 781],
+    [782, 792],
+    [793, 795],
+    [796, 802],
+    [803, 809],
+    [810, 813],
+    [814, 819],
+    [820, 828],
+    [829, 832],
+    [833, 836],
+    [837, 846],
+    [847, 850],
+    [851, 856],
+    [857, 860],
+    [861, 873],
+    [874, 888],
+    [889, 894],
+    [895, 902],
+    [903, 913],
+    [914, 917],
+    [918, 927],
+    [928, 938],
+    [939, 944],
+    [945, 956],
+    [957, 962],
+    [963, 969],
+    [970, 973],
+    [974, 980],
+    [981, 987],
+    [988, 990],
+    [991, 999],
+    [1000, 1011],
+    [1012, 1014],
+    [1015, 1020],
+    [1021, 1034],
+    [1035, 1038],
+    [1039, 1046],
+    [1047, 1050],
+    [1051, 1058],
+    [1059, 1061],
+    [1062, 1075],
+    [1076, 1083],
+    [1084, 1088],
+    [1089, 1095],
+    [1096, 1098],
+    [1099, 1110],
+    [1111, 1115],
+    [1116, 1123],
+    [1124, 1126],
+    [1127, 1144],
+    [1145, 1151],
+    [1152, 1166],
+    [1167, 1171],
+    [1172, 1179],
+    [1180, 1188],
+    [1189, 1195],
+    [1196, 1203],
+    [1204, 1213],
+    [1214, 1218],
+    [1219, 1222],
+    [1223, 1229],
+    [1230, 1236],
+    [1237, 1246],
+    [1247, 1259],
+    [1260, 1266],
+    [1267, 1273],
+    [1274, 1280],
+    [1281, 1289],
+    [1290, 1292],
+    [1293, 1297],
+    [1298, 1301],
+    [1302, 1304],
+    [1305, 1307],
+    [1308, 1310],
+    [1311, 1316],
+    [1317, 1324],
+    [1325, 1329],
+    [1330, 1332],
+    [1333, 1349],
+    [1350, 1352],
+    [1353, 1359],
+    [1360, 1365],
+    [1366, 1372],
+    [1373, 1374],
+    [1375, 1380],
+    [1381, 1390],
+    [1391, 1403],
+    [1404, 1407],
+    [1408, 1419],
+    [1420, 1422],
+    [1423, 1429],
+    [1430, 1436],
+    [1437, 1444],
+    [1445, 1449],
+    [1450, 1453],
+    [1454, 1460],
+    [1461, 1466],
+    [1467, 1471],
+    [1472, 1480],
+    [1481, 1491],
+    [1492, 1496],
+    [1497, 1502],
+    [1503, 1516],
+    [1517, 1519],
+    [1520, 1526],
+    [1527, 1529],
+    [1530, 1533],
+    [1534, 1537],
+    [1538, 1542],
+    [1543, 1549],
+    [1550, 1555],
+    [1556, 1571],
+    [1572, 1580],
+    [1581, 1586],
+    [1587, 1594],
+    [1595, 1597],
+    [1598, 1608],
+    [1609, 1613],
+    [1614, 1617],
+    [1618, 1625],
+    [1626, 1628],
+    [1629, 1633],
+    [1634, 1643],
+    [1644, 1652],
+    [1653, 1660],
+    [1661, 1664],
+    [1665, 1668],
+    [1669, 1673],
+    [1674, 1680],
+    [1681, 1686],
+    [1687, 1691],
+    [1692, 1703],
+    [1704, 1708],
+    [1709, 1713],
+    [1714, 1728],
+    [1729, 1737],
+    [1738, 1743],
+    [1744, 1750],
+    [1751, 1764],
+    [1765, 1773],
+    [1774, 1778],
+    [1779, 1785],
+    [1786, 1787],
+    [1788, 1794],
+    [1795, 1798],
+    [1799, 1803],
+    [1804, 1816],
+    [1817, 1827],
+    [1828, 1830],
+    [1831, 1835],
+    [1836, 1838],
+    [1839, 1843],
+    [1844, 1846],
+    [1847, 1859],
+    [1860, 1875],
+    [1876, 1879],
+    [1880, 1887],
+    [1888, 1890],
+    [1891, 1901],
+    [1902, 1904],
+    [1905, 1910],
+    [1911, 1913],
+    [1914, 1917],
+    [1918, 1924],
+    [1925, 1934],
+    [1935, 1937],
+    [1938, 1949],
+    [1950, 1953],
+    [1954, 1961],
+    [1962, 1964],
+    [1965, 1970],
+    [1971, 1978],
+    [1979, 1989],
+    [1990, 1996],
+    [1997, 1999],
+    [2000, 2005],
+    [2006, 2012],
+    [2013, 2026],
+    [2027, 2029],
+    [2030, 2033],
+    [2034, 2041],
+    [2042, 2044],
+    [2045, 2049],
+    [2050, 2059],
+    [2060, 2063],
+    [2064, 2071],
+    [2072, 2076],
+    [2077, 2086],
+    [2087, 2091],
+    [2092, 2100],
+    [2101, 2109],
+    [2110, 2116],
+    [2117, 2119],
+    [2120, 2127],
+    [2128, 2133],
+    [2134, 2141],
+    [2142, 2147],
+    [2148, 2154],
+    [2155, 2168],
+    [2169, 2172],
+    [2173, 2180],
+    [2181, 2186],
+    [2187, 2198],
+    [2199, 2201],
+    [2202, 2207]
+  ],
+  "action": "getDocument",
+  "attributes": [
+    ["A1", "CL", "E1", "L3"],
+    ["A2", "KT", "E1", "Investigation"],
+    ["A3", "Manner", "E1", "Neutral"],
+    ["A4", "Polarity", "E1", "Positive"],
+    ["A5", "Source", "E1", "Current"],
+    ["A6", "CL", "E2", "L3"],
+    ["A7", "KT", "E2", "Investigation"],
+    ["A8", "Manner", "E2", "Neutral"],
+    ["A9", "Polarity", "E2", "Positive"],
+    ["A10", "Source", "E2", "Current"],
+    ["A11", "CL", "E42", "L3"],
+    ["A12", "KT", "E42", "Investigation"],
+    ["A13", "Manner", "E42", "Neutral"],
+    ["A14", "Polarity", "E42", "Positive"],
+    ["A15", "Source", "E42", "Current"],
+    ["A16", "CL", "E48", "L3"],
+    ["A17", "KT", "E48", "Investigation"],
+    ["A18", "Manner", "E48", "Neutral"],
+    ["A19", "Polarity", "E48", "Positive"],
+    ["A20", "Source", "E48", "Current"],
+    ["A21", "CL", "E3", "L3"],
+    ["A22", "KT", "E3", "Gen-Fact"],
+    ["A23", "Manner", "E3", "Neutral"],
+    ["A24", "Polarity", "E3", "Positive"],
+    ["A25", "Source", "E3", "Current"],
+    ["A26", "CL", "E4", "L3"],
+    ["A27", "KT", "E4", "Gen-Fact"],
+    ["A28", "Manner", "E4", "Neutral"],
+    ["A29", "Polarity", "E4", "Positive"],
+    ["A30", "Source", "E4", "Current"],
+    ["A31", "CL", "E10", "L3"],
+    ["A32", "KT", "E10", "Gen-Other"],
+    ["A33", "Manner", "E10", "Neutral"],
+    ["A34", "Polarity", "E10", "Positive"],
+    ["A35", "Source", "E10", "Current"],
+    ["A36", "CL", "E5", "L3"],
+    ["A37", "KT", "E5", "Gen-Fact"],
+    ["A38", "Manner", "E5", "Neutral"],
+    ["A39", "Polarity", "E5", "Positive"],
+    ["A40", "Source", "E5", "Current"],
+    ["A41", "CL", "E6", "L3"],
+    ["A42", "KT", "E6", "Gen-Other"],
+    ["A43", "Manner", "E6", "Neutral"],
+    ["A44", "Polarity", "E6", "Positive"],
+    ["A45", "Source", "E6", "Current"],
+    ["A46", "CL", "E7", "L3"],
+    ["A47", "KT", "E7", "Gen-Other"],
+    ["A48", "Manner", "E7", "Neutral"],
+    ["A49", "Polarity", "E7", "Positive"],
+    ["A50", "Source", "E7", "Current"],
+    ["A51", "CL", "E8", "L3"],
+    ["A52", "KT", "E8", "Gen-Fact"],
+    ["A53", "Manner", "E8", "Neutral"],
+    ["A54", "Polarity", "E8", "Positive"],
+    ["A55", "Source", "E8", "Current"],
+    ["A56", "CL", "E9", "L3"],
+    ["A57", "KT", "E9", "Gen-Other"],
+    ["A58", "Manner", "E9", "Neutral"],
+    ["A59", "Polarity", "E9", "Positive"],
+    ["A60", "Source", "E9", "Current"],
+    ["A61", "CL", "E11", "L3"],
+    ["A62", "KT", "E11", "Gen-Other"],
+    ["A63", "Manner", "E11", "Low"],
+    ["A64", "Polarity", "E11", "Positive"],
+    ["A65", "Source", "E11", "Current"],
+    ["A66", "CL", "E12", "L3"],
+    ["A67", "KT", "E12", "Gen-Other"],
+    ["A68", "Manner", "E12", "Neutral"],
+    ["A69", "Polarity", "E12", "Positive"],
+    ["A70", "Source", "E12", "Current"],
+    ["A71", "CL", "E13", "L3"],
+    ["A72", "KT", "E13", "Gen-Other"],
+    ["A73", "Manner", "E13", "Neutral"],
+    ["A74", "Polarity", "E13", "Positive"],
+    ["A75", "Source", "E13", "Current"],
+    ["A76", "CL", "E14", "L3"],
+    ["A77", "KT", "E14", "Gen-Fact"],
+    ["A78", "Manner", "E14", "Neutral"],
+    ["A79", "Polarity", "E14", "Positive"],
+    ["A80", "Source", "E14", "Current"],
+    ["A81", "CL", "E15", "L3"],
+    ["A82", "KT", "E15", "Gen-Fact"],
+    ["A83", "Manner", "E15", "Neutral"],
+    ["A84", "Polarity", "E15", "Positive"],
+    ["A85", "Source", "E15", "Current"],
+    ["A86", "CL", "E18", "L3"],
+    ["A87", "KT", "E18", "Gen-Fact"],
+    ["A88", "Manner", "E18", "Neutral"],
+    ["A89", "Polarity", "E18", "Positive"],
+    ["A90", "Source", "E18", "Current"],
+    ["A91", "CL", "E19", "L3"],
+    ["A92", "KT", "E19", "Gen-Other"],
+    ["A93", "Manner", "E19", "Neutral"],
+    ["A94", "Polarity", "E19", "Positive"],
+    ["A95", "Source", "E19", "Current"],
+    ["A96", "CL", "E20", "L3"],
+    ["A97", "KT", "E20", "Gen-Other"],
+    ["A98", "Manner", "E20", "Neutral"],
+    ["A99", "Polarity", "E20", "Positive"],
+    ["A100", "Source", "E20", "Current"],
+    ["A101", "CL", "E21", "L3"],
+    ["A102", "KT", "E21", "Gen-Other"],
+    ["A103", "Manner", "E21", "Neutral"],
+    ["A104", "Polarity", "E21", "Positive"],
+    ["A105", "Source", "E21", "Current"],
+    ["A106", "CL", "E22", "L3"],
+    ["A107", "KT", "E22", "Investigation"],
+    ["A108", "Manner", "E22", "Neutral"],
+    ["A109", "Polarity", "E22", "Positive"],
+    ["A110", "Source", "E22", "Current"],
+    ["A111", "CL", "E40", "L3"],
+    ["A112", "KT", "E40", "Investigation"],
+    ["A113", "Manner", "E40", "Neutral"],
+    ["A114", "Polarity", "E40", "Positive"],
+    ["A115", "Source", "E40", "Current"],
+    ["A116", "CL", "E49", "L3"],
+    ["A117", "KT", "E49", "Investigation"],
+    ["A118", "Manner", "E49", "Neutral"],
+    ["A119", "Polarity", "E49", "Positive"],
+    ["A120", "Source", "E49", "Current"],
+    ["A121", "CL", "E23", "L3"],
+    ["A122", "KT", "E23", "Analysis"],
+    ["A123", "Manner", "E23", "Neutral"],
+    ["A124", "Polarity", "E23", "Positive"],
+    ["A125", "Source", "E23", "Current"],
+    ["A126", "CL", "E24", "L3"],
+    ["A127", "KT", "E24", "Analysis"],
+    ["A128", "Manner", "E24", "Neutral"],
+    ["A129", "Polarity", "E24", "Positive"],
+    ["A130", "Source", "E24", "Current"],
+    ["A131", "CL", "E25", "L3"],
+    ["A132", "KT", "E25", "Gen-Other"],
+    ["A133", "Manner", "E25", "Neutral"],
+    ["A134", "Polarity", "E25", "Positive"],
+    ["A135", "Source", "E25", "Current"],
+    ["A136", "CL", "E26", "L3"],
+    ["A137", "KT", "E26", "Observation"],
+    ["A138", "Manner", "E26", "Neutral"],
+    ["A139", "Polarity", "E26", "Positive"],
+    ["A140", "Source", "E26", "Current"],
+    ["A141", "CL", "E28", "L3"],
+    ["A142", "KT", "E28", "Observation"],
+    ["A143", "Manner", "E28", "Neutral"],
+    ["A144", "Polarity", "E28", "Positive"],
+    ["A145", "Source", "E28", "Current"],
+    ["A146", "CL", "E27", "L3"],
+    ["A147", "KT", "E27", "Analysis"],
+    ["A148", "Manner", "E27", "Neutral"],
+    ["A149", "Polarity", "E27", "Positive"],
+    ["A150", "Source", "E27", "Current"],
+    ["A151", "CL", "E29", "L3"],
+    ["A152", "KT", "E29", "Analysis"],
+    ["A153", "Manner", "E29", "Neutral"],
+    ["A154", "Polarity", "E29", "Positive"],
+    ["A155", "Source", "E29", "Current"],
+    ["A156", "CL", "E30", "L3"],
+    ["A157", "KT", "E30", "Gen-Other"],
+    ["A158", "Manner", "E30", "Neutral"],
+    ["A159", "Polarity", "E30", "Positive"],
+    ["A160", "Source", "E30", "Current"],
+    ["A161", "CL", "E31", "L3"],
+    ["A162", "KT", "E31", "Analysis"],
+    ["A163", "Manner", "E31", "Neutral"],
+    ["A164", "Polarity", "E31", "Positive"],
+    ["A165", "Source", "E31", "Current"],
+    ["A166", "CL", "E32", "L3"],
+    ["A167", "KT", "E32", "Gen-Other"],
+    ["A168", "Manner", "E32", "Neutral"],
+    ["A169", "Polarity", "E32", "Positive"],
+    ["A170", "Source", "E32", "Current"],
+    ["A171", "CL", "E33", "L3"],
+    ["A172", "KT", "E33", "Analysis"],
+    ["A173", "Manner", "E33", "Neutral"],
+    ["A174", "Polarity", "E33", "Positive"],
+    ["A175", "Source", "E33", "Current"],
+    ["A176", "CL", "E34", "L3"],
+    ["A177", "KT", "E34", "Analysis"],
+    ["A178", "Manner", "E34", "Neutral"],
+    ["A179", "Polarity", "E34", "Positive"],
+    ["A180", "Source", "E34", "Current"],
+    ["A181", "CL", "E35", "L3"],
+    ["A182", "KT", "E35", "Analysis"],
+    ["A183", "Manner", "E35", "Neutral"],
+    ["A184", "Polarity", "E35", "Positive"],
+    ["A185", "Source", "E35", "Current"],
+    ["A186", "CL", "E36", "L3"],
+    ["A187", "KT", "E36", "Analysis"],
+    ["A188", "Manner", "E36", "Neutral"],
+    ["A189", "Polarity", "E36", "Positive"],
+    ["A190", "Source", "E36", "Current"],
+    ["A191", "CL", "E37", "L3"],
+    ["A192", "KT", "E37", "Analysis"],
+    ["A193", "Manner", "E37", "Neutral"],
+    ["A194", "Polarity", "E37", "Positive"],
+    ["A195", "Source", "E37", "Current"],
+    ["A196", "CL", "E38", "L3"],
+    ["A197", "KT", "E38", "Investigation"],
+    ["A198", "Manner", "E38", "Neutral"],
+    ["A199", "Polarity", "E38", "Positive"],
+    ["A200", "Source", "E38", "Current"],
+    ["A201", "CL", "E41", "L2"],
+    ["A202", "KT", "E41", "Analysis"],
+    ["A203", "Manner", "E41", "Neutral"],
+    ["A204", "Polarity", "E41", "Positive"],
+    ["A205", "Source", "E41", "Current"],
+    ["A206", "CL", "E43", "L3"],
+    ["A207", "KT", "E43", "Gen-Other"],
+    ["A208", "Manner", "E43", "Neutral"],
+    ["A209", "Polarity", "E43", "Positive"],
+    ["A210", "Source", "E43", "Current"],
+    ["A211", "CL", "E44", "L3"],
+    ["A212", "KT", "E44", "Gen-Other"],
+    ["A213", "Manner", "E44", "Neutral"],
+    ["A214", "Polarity", "E44", "Positive"],
+    ["A215", "Source", "E44", "Current"],
+    ["A216", "CL", "E45", "L3"],
+    ["A217", "KT", "E45", "Gen-Other"],
+    ["A218", "Manner", "E45", "Neutral"],
+    ["A219", "Polarity", "E45", "Positive"],
+    ["A220", "Source", "E45", "Current"],
+    ["A221", "CL", "E46", "L3"],
+    ["A222", "KT", "E46", "Gen-Other"],
+    ["A223", "Manner", "E46", "Neutral"],
+    ["A224", "Polarity", "E46", "Positive"],
+    ["A225", "Source", "E46", "Current"],
+    ["A226", "CL", "E47", "L3"],
+    ["A227", "KT", "E47", "Gen-Other"],
+    ["A228", "Manner", "E47", "Neutral"],
+    ["A229", "Polarity", "E47", "Positive"],
+    ["A230", "Source", "E47", "Current"]
+  ],
+  "equivs": [],
+  "events": [
+    ["E1", "T89", [
+      ["Theme", "T3"]
+    ]],
+    ["E2", "T90", [
+      ["Theme", "T6"]
+    ]],
+    ["E42", "T91", [
+      ["Theme", "T3"]
+    ]],
+    ["E48", "T92", [
+      ["Theme", "T6"]
+    ]],
+    ["E3", "T93", [
+      ["Theme", "T10"],
+      ["Cause", "T9"]
+    ]],
+    ["E4", "T94", [
+      ["Theme", "T11"],
+      ["Cause", "T9"]
+    ]],
+    ["E10", "T95", [
+      ["Theme", "T21"],
+      ["Cause", "T96"]
+    ]],
+    ["E5", "T97", [
+      ["Theme", "E7"],
+      ["Cause", "T96"]
+    ]],
+    ["E6", "T98", [
+      ["Theme", "T13"],
+      ["Theme", "T16"]
+    ]],
+    ["E7", "T99", [
+      ["Theme", "T16"]
+    ]],
+    ["E8", "T100", [
+      ["Theme", "E7"],
+      ["Cause", "T101"]
+    ]],
+    ["E9", "T102", [
+      ["Theme", "T21"],
+      ["Cause", "T101"]
+    ]],
+    ["E11", "T103", [
+      ["Theme", "T15"],
+      ["Cue", "T104"]
+    ]],
+    ["E12", "T105", [
+      ["Theme", "T24"]
+    ]],
+    ["E13", "T106", [
+      ["Theme", "T26"],
+      ["Cause", "T25"]
+    ]],
+    ["E14", "T107", [
+      ["Theme", "T31"],
+      ["Theme", "T32"],
+      ["Theme", "T37"]
+    ]],
+    ["E15", "T108", [
+      ["Theme", "T109"],
+      ["Cause", "T31"],
+      ["Cause", "T32"]
+    ]],
+    ["E18", "T110", [
+      ["Theme", "T111"],
+      ["Cause", "T31"],
+      ["Cause", "T32"]
+    ]],
+    ["E19", "T112", [
+      ["Theme", "T43"],
+      ["Cause", "T42"]
+    ]],
+    ["E20", "T113", [
+      ["Theme", "T46"],
+      ["Cause", "T44"]
+    ]],
+    ["E21", "T114", [
+      ["Theme", "T47"],
+      ["Cause", "T44"]
+    ]],
+    ["E22", "T115", [
+      ["Theme", "T49"],
+      ["Theme", "T50"],
+      ["Cue", "T116"]
+    ]],
+    ["E40", "T117", [
+      ["Theme", "T49"],
+      ["Theme", "T50"],
+      ["Cue", "T116"]
+    ]],
+    ["E49", "T118", [
+      ["Theme", "T49"],
+      ["Theme", "T50"],
+      ["Cue", "T116"]
+    ]],
+    ["E23", "T119", [
+      ["Cause", "T53"],
+      ["Cue", "T120"]
+    ]],
+    ["E24", "T121", [
+      ["Cause", "T53"],
+      ["Cue", "T120"]
+    ]],
+    ["E25", "T122", [
+      ["Theme", "T52"]
+    ]],
+    ["E26", "T123", [
+      ["Theme", "T57"]
+    ]],
+    ["E28", "T124", [
+      ["Theme", "T59"]
+    ]],
+    ["E27", "T125", [
+      ["Theme", "T61"],
+      ["Theme", "E30"],
+      ["Cue", "T126"]
+    ]],
+    ["E29", "T127", [
+      ["Theme", "T61"],
+      ["Theme", "E30"],
+      ["Cue", "T126"]
+    ]],
+    ["E30", "T128", [
+      ["Theme", "T66"]
+    ]],
+    ["E31", "T129", [
+      ["Theme", "E32"],
+      ["Cue", "T130"]
+    ]],
+    ["E32", "T131", [
+      ["Theme", "T71"]
+    ]],
+    ["E33", "T132", [
+      ["Theme", "E32"],
+      ["Cue", "T130"]
+    ]],
+    ["E34", "T133", [
+      ["Theme", "T74"],
+      ["Cue", "T130"]
+    ]],
+    ["E35", "T134", [
+      ["Theme", "T74"],
+      ["Theme", "T75"],
+      ["Cue", "T130"]
+    ]],
+    ["E36", "T135", [
+      ["Theme", "T74"],
+      ["Cue", "T130"]
+    ]],
+    ["E37", "T136", [
+      ["Theme", "T74"],
+      ["Theme", "T75"],
+      ["Cue", "T130"]
+    ]],
+    ["E38", "T137", [
+      ["Theme", "T80"],
+      ["Cue", "T138"]
+    ]],
+    ["E41", "T139", [
+      ["Theme", "T84"],
+      ["Cue", "T140"],
+      ["Cue", "T141"]
+    ]],
+    ["E43", "T142", [
+      ["Theme", "E44"],
+      ["Cause", "E41"]
+    ]],
+    ["E44", "T143", [
+      ["Theme", "T86"]
+    ]],
+    ["E45", "T144", [
+      ["Theme", "E46"],
+      ["Cause", "E41"]
+    ]],
+    ["E46", "T145", [
+      ["Theme", "T87"]
+    ]],
+    ["E47", "T146", [
+      ["Theme", "T83"]
+    ]]
+  ]
+}

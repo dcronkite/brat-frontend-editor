@@ -16,8 +16,8 @@ NodeJS (and NPM)
 
 ```bash
 npm install -g http-server
-    cd DIRECTORY
-    http-server -p 8080
+cd DIRECTORY
+http-server -p 8080
 ```
 Then open browser on localhost:8080/index.html
 

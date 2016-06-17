@@ -35,32 +35,32 @@ var LocalAjax = (function($, window, undefined) {
                 var MAX_LENGTH = 80;
                 var new_offsets = [];
 
-                if(offsets.find( x => (x[1] - x[0]) > MAX_LENGTH)){
-                    offsets.forEach(function(fragment){
-                        var from = fragment[0],
-                            lastFrom = from,
-                            to = fragment[1],
-                            lastTo = from;
-                        var i = 0;
-                        while((to - lastFrom) > MAX_LENGTH){
-                            lastFrom = lastTo;
-                            lastTo = lastTo + MAX_LENGTH;
-                            var subtext = "";
-                            if(lastTo <= data.document.text.length){
-                                subtext = data.document.text.substring(lastFrom, lastTo);
-                            }
-                            if(lastTo >= to ){
-                                lastTo = to;
-                            }else{
-                                lastTo = lastFrom + subtext.lastIndexOf(' ');
-                            }
-                            new_offsets.push([lastFrom, lastTo]);
-                            i++;
-                        }
-                    });
-                }else{
+                //if(offsets.find( x => (x[1] - x[0]) > MAX_LENGTH)){
+                //    offsets.forEach(function(fragment){
+                //        var from = fragment[0],
+                //            lastFrom = from,
+                //            to = fragment[1],
+                //            lastTo = from;
+                //        var i = 0;
+                //        while((to - lastFrom) > MAX_LENGTH){
+                //            lastFrom = lastTo;
+                //            lastTo = lastTo + MAX_LENGTH;
+                //            var subtext = "";
+                //            if(lastTo <= data.document.text.length){
+                //                subtext = data.document.text.substring(lastFrom, lastTo);
+                //            }
+                //            if(lastTo >= to ){
+                //                lastTo = to;
+                //            }else{
+                //                lastTo = lastFrom + subtext.lastIndexOf(' ');
+                //            }
+                //            new_offsets.push([lastFrom, lastTo]);
+                //            i++;
+                //        }
+                //    });
+                //}else{
                     new_offsets = offsets;
-                }
+                //}
 
 
                 //Split by word based on space, supports overlaps but wrong results...

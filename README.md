@@ -13,9 +13,12 @@ Prerequisites : None
 ## Example with Node http-server module##
 Prerequisites :
 NodeJS (and NPM)
-    npm install -g http-server
+
+```bash
+npm install -g http-server
     cd DIRECTORY
     http-server -p 8080
+```
 Then open browser on localhost:8080/index.html
 
 

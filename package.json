@@ -2,9 +2,11 @@
   "name": "brat-frontend-editor",
   "version": "0.0.1",
   "description": "\"BRAT Editor standalone frontend library\"",
-  "main": "index.js",
+  "main": "client/dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel-build": "babel --presets es2015 -d client/dist/ client/src/",
+    "browserify-build": "browserify --debug index.js -o bundle.js -t [ babelify --presets [ es2015 ] ]",
+    "prepublish": "npm run browserify-build"
   },
   "repository": {
     "type": "git",
@@ -25,8 +27,15 @@
   "homepage": "https://github.com/crim-ca/brat-frontend-editor#readme",
   "dependencies": {
     "headjs": "^1.0.3",
+    "jquery": "^1.11.1",
     "jquery-bbq": "0.0.1",
     "jquery1-7-1": "^1.0.0",
     "sprintf-js": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1"
   }
 }

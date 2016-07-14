@@ -128,3 +128,5 @@ var Dispatcher = (function($, window, undefined) {
 
     return Dispatcher;
 })(jQuery, window);
+
+module.exports = Dispatcher;

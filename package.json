@@ -1,17 +1,32 @@
 {
-  "name": "brat-js",
+  "name": "brat-frontend-editor",
   "version": "0.0.1",
-  "description": "brat frontend library",
+  "description": "\"BRAT Editor standalone frontend library\"",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crim-ca/brat-frontend-editor.git"
+  },
   "keywords": [
     "brat",
-    "text",
+    "editor",
+    "frontend",
     "annotation",
-    "library"
+    "text"
   ],
-  "author": "Renaud Hébert-Legault",
-  "license": "MIT"
+  "author": "Renaud Hebert-Legault <renaud.hebert-legault@crim.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crim-ca/brat-frontend-editor/issues"
+  },
+  "homepage": "https://github.com/crim-ca/brat-frontend-editor#readme",
+  "dependencies": {
+    "headjs": "^1.0.3",
+    "jquery-bbq": "0.0.1",
+    "jquery1-7-1": "^1.0.0",
+    "sprintf-js": "^1.0.3"
+  }
 }

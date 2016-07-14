@@ -23,7 +23,6 @@ var LocalAjax = (function($, window, undefined) {
             var attrs = JSON.parse(data.attributes),
                 offsets = JSON.parse(data.offsets),
                 e_type = findType(data.collection.entity_types, data.type);
-                console.log(e_type);
                 e_id = "";//Entity or Trigger
             if(!e_type){
                 //Trigger
@@ -163,7 +162,6 @@ var LocalAjax = (function($, window, undefined) {
                 entity[1] = data.type;
                 entity[2] = offsets;
                 e_type = findType(data.collection.entity_types, data.type);
-                console.log(e_type);
 
             }else{
                 //TODO: Error

@@ -2,10 +2,28 @@ var LocalAjax = (function($, window, undefined) {
     var LocalAjax = function(dispatcher) {
         var that = this;
 
+        var findType = function (entityTypes, type) {
+            for (var i = 0; i < entityTypes.length; i++) {
+                var entityType = entityTypes[i];
+                if (entityType.type === type) {
+                    return entityType;
+                } else {
+                    if (entityType.children && entityType.children.length) {
+                        var result = findType(entityType.children, type);
+                        if (result !== null){
+                            return result;
+                        }
+                    }
+                }
+            }
+            return null;
+        };
+
         var createAnnotation = function(data){
             var attrs = JSON.parse(data.attributes),
                 offsets = JSON.parse(data.offsets),
-                e_type = data.collection.entity_types.find( x => x.type === data.type ), //Entity or Trigger //TODO: We must navigate in children n sub-children to support hierarchical entities
+                e_type = findType(data.collection.entity_types, data.type);
+                console.log(e_type);
                 e_id = "";//Entity or Trigger
             if(!e_type){
                 //Trigger
@@ -144,7 +162,9 @@ var LocalAjax = (function($, window, undefined) {
                 var entity = data.document.entities.find( x => x[0] === data.id );
                 entity[1] = data.type;
                 entity[2] = offsets;
-                e_type = data.collection.entity_types.find( x => x.type === data.type ); //TODO: We must navigate in children to support hierarchical entities
+                e_type = findType(data.collection.entity_types, data.type);
+                console.log(e_type);
+
             }else{
                 //TODO: Error
             }
@@ -152,8 +172,8 @@ var LocalAjax = (function($, window, undefined) {
                 //Removed all attributes for this particular annotation id
                 var existing_attrs = data.document.attributes.filter( x => x[2] === data.id);
                 existing_attrs.forEach(function(attr){
-                    var index = data.document.attributes.indexOf( x => x[0] === attr[0]);
-                    data.document.attributes.splice(1, index);
+                    var index = data.document.attributes.indexOf( x => x[0] === attr[0]); //TODO: this always returns -1
+                    data.document.attributes.splice(index, 1);
                 });
 
                 //Re-add all attributes
@@ -207,6 +227,34 @@ var LocalAjax = (function($, window, undefined) {
                 return {}; //TODO: Error handling
             }
 
+        };
+
+        var deleteAnnotation = function (data) {
+            // delete the entity. TODO: also delete events etc
+            var entities = data.document.entities;
+            for (var i = 0; i < entities.length; i++){
+                if (entities[i][0] === data.id){  // entity format [id, type, offsets], e.g. ["N1", "Person", Array[2]]
+                    entities.splice(i, 1);
+                    break;
+                }
+            }
+            // delete relations containing the entity TODO: attributes etc?
+            var relations = data.document.relations;
+            for (var i = relations.length - 1; i >= 0; i--){
+                // relation format: ["R1", "Friend", Array[2]]
+                var relation = relations[i][2];  // e.g. [['From', "N1"], ['To', 'N2']]
+                if (relation[0][1] === data.id || relation[1][1] === data.id){
+                    relations.splice(i, 1);
+                }
+            }
+
+            return {
+                    action: data.action,
+                    annotations: data.document,
+                    edited: [],
+                    messages: [],
+                    protocol: 1
+                };
         };
 
         createRelation = function(data){
@@ -346,7 +394,7 @@ var LocalAjax = (function($, window, undefined) {
                     }
                     break;
                 case "deleteSpan":
-                    //TODO
+                    response = deleteAnnotation(data);
                     break;
                 case "deleteFragmentxyz?":
                     //TODO

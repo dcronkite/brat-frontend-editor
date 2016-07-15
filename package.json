@@ -4,6 +4,7 @@
   "description": "\"BRAT Editor standalone frontend library\"",
   "main": "client/dist/index.js",
   "scripts": {
+    "start": "http-server -p 8008",
     "babel-build": "babel --presets es2015 -d client/dist/ client/src/",
     "build": "browserify --debug index.js -o dist/brat-frontend-editor.js -t [ babelify --presets [ es2015 ] ]",
     "cleancss": "cleancss -o dist/brat-frontend-editor.min.css index.css",

@@ -129,4 +129,7 @@ var Dispatcher = (function($, window, undefined) {
     return Dispatcher;
 })(jQuery, window);
 
+// BRAT STANDALONE LIBRARY BEGIN
+// Browserify export
 module.exports = Dispatcher;
+// BRAT STANDALONE LIBRARY END

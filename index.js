@@ -6,9 +6,12 @@ window.jQuery = $;
     var Dispatcher = require("./client/src/dispatcher");
 
     $(document).ready(function(){
+        const array = "123";
         var dispatcher = new Dispatcher();
         console.log("yolo");
     });
+
+
 
 })($);
 

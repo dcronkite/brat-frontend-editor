@@ -26,3 +26,8 @@ var Spinner = (function($, window, undefined) {
 
     return Spinner;
 })(jQuery, window);
+
+// BRAT STANDALONE LIBRARY BEGIN
+// Browserify export
+module.exports = Spinner;
+// BRAT STANDALONE LIBRARY END

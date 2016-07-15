@@ -3118,7 +3118,7 @@ Util.profileStart('before render');
             //console.log("font loading:", fontFamily, fontDescription);
           },
         };
-        WebFont.load(webFontConfig);
+        //WebFont.load(webFontConfig);
         setTimeout(function() {
           if (!Visualizer.areFontsLoaded) {
             console.error('Timeout in loading fonts');
@@ -3156,3 +3156,8 @@ Util.profileStart('before render');
 
     return Visualizer;
 })(jQuery, window);
+
+// BRAT STANDALONE LIBRARY BEGIN
+// Browserify export
+module.exports = Visualizer;
+// BRAT STANDALONE LIBRARY END

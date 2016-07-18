@@ -1,4 +1,4 @@
-window.$ = require("jquery-node-browserify"); // @1.11.1
+window.$ = require("./client/lib/node-jquery-1.7.1"); //require("jquery-node-browserify"); // @1.7.2 ++
 
 var collData = {
     "messages": [],
@@ -401,7 +401,7 @@ window.jQuery = $;
     require("./client/lib/jquery.sprintf");
     require("./client/lib/jquery.json.min");
     //TODO Fix this error
-    window.WebFont = require("./client/lib/webfont.js"); //Uncaught TypeError: Cannot set property 'WebFont' of undefined
+    window.WebFont = require("./client/lib/webfont.js").WebFont; //Uncaught TypeError: Cannot set property 'WebFont' of undefined
 
     //brat global helpers
     var Config= require("./client/src/configuration");

@@ -3118,7 +3118,7 @@ Util.profileStart('before render');
             //console.log("font loading:", fontFamily, fontDescription);
           },
         };
-        //WebFont.load(webFontConfig);
+        WebFont.load(webFontConfig);
         setTimeout(function() {
           if (!Visualizer.areFontsLoaded) {
             console.error('Timeout in loading fonts');

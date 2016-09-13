@@ -1,0 +1,8 @@
+.idea/
+node_modules/
+client/
+configurations/
+data/
+example-data/
+test-json/
+test-json-simple/

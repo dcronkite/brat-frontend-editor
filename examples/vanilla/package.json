@@ -1,0 +1,14 @@
+{
+  "name": "brat-frontend-editor-consumer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Renaud Hebert-Legault <renaud.hebert-legault@crim.ca>",
+  "license": "ISC",
+  "dependencies": {
+    "brat-frontend-editor": "0.0.17"
+  }
+}

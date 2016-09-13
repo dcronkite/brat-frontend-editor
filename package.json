@@ -1,6 +1,6 @@
 {
   "name": "brat-frontend-editor",
-  "version": "0.0.1",
+  "version": "0.0.17",
   "description": "\"BRAT Editor standalone frontend library\"",
   "main": "client/dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "babel-build": "babel --presets es2015 -d client/dist/ client/src/",
     "babel-unstrict": "babel --plugins transform-remove-strict-mode dist/brat-frontend-editor.js > dist/brat-frontend-editor.unstrict.js",
     "babelify-build": "browserify --debug index.js -o dist/brat-frontend-editor.js -t [ babelify --presets [ es2015 ] --compact true ] && npm run babel-unstrict",
-    "browserify-build": "browserify --debug index.js -o dist/brat-frontend-editor.js",
+    "browserify-build": "browserify --debug index.js -o dist/brat-frontend-editor.js -t [ stringify --extensions [.html] ]",
     "cleancss": "cleancss -o dist/brat-frontend-editor.min.css index.css",
     "minify": "browserify dist/brat-frontend-editor.js -d -p [minifyify --no-map] > dist/brat-frontend-editor.min.js",
     "prepublish": "npm run browserify-build && npm run cleancss"
@@ -46,6 +46,7 @@
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "clean-css": "^3.4.18",
-    "minifyify": "^7.3.3"
+    "minifyify": "^7.3.3",
+    "stringify": "^5.1.0"
   }
 }

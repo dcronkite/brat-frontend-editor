@@ -7,23 +7,20 @@ http://brat.nlplab.org/
 This version is full frontend working version of brat editing tools
 
 
-## Install and execute ##
-Prerequisites : None
+## Install and execute main app or provided examples
+####Prerequisites :
+- Node.js >= 4.5.x
+- npm >= 3.0.x
 
-## Example with Node http-server module##
-Prerequisites :
-NodeJS (and NPM)
-
+#### Root app as well as all examples can be executed with
 ```bash
-npm install -g http-server
-cd DIRECTORY
-http-server -p 8080
+npm install
+npm start #Then open browser on localhost:3000
 ```
-Then open browser on localhost:8080/index.html
 
 ## Import module in your current application##
 ```bash
-npm install brat-frontend-editor
+npm install brat-frontend-editor --save
 ```
 
 ### Vanilla JavaScript
@@ -56,7 +53,7 @@ require('brat-frontend-editor');
 })
 export class ComponentX {
 
-  constructor(public appState: AppState, public title: Title) {
+  constructor() {
   }
 
   ngOnInit() {

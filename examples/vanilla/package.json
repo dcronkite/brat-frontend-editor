@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "http-server -p 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Renaud Hebert-Legault <renaud.hebert-legault@crim.ca>",
   "license": "ISC",
   "dependencies": {
     "brat-frontend-editor": "0.0.17"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
   }
 }

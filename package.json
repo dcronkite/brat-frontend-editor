@@ -4,7 +4,7 @@
   "description": "\"BRAT Editor standalone frontend library\"",
   "main": "index.js",
   "scripts": {
-    "start": "npm run prepublish && http-server -p 8008",
+    "start": "npm run prepublish && http-server -p 3000",
     "babel-build": "babel --presets es2015 -d client/dist/ client/src/",
     "babel-unstrict": "babel --plugins transform-remove-strict-mode dist/brat-frontend-editor.js > dist/brat-frontend-editor.unstrict.js",
     "babelify-build": "browserify --debug index.js -o dist/brat-frontend-editor.js -t [ babelify --presets [ es2015 ] --compact true ] && npm run babel-unstrict",
@@ -46,6 +46,7 @@
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "clean-css": "^3.4.18",
+    "http-server": "^0.9.0",
     "minifyify": "^7.3.3",
     "stringify": "^5.1.0"
   }

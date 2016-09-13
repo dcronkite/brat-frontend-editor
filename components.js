@@ -1,3 +1,1 @@
-/**
- * Created by osboxes on 13/09/16.
- */
+require('./dist/brat-frontend-editor');

@@ -26,7 +26,7 @@ Then open browser on localhost:8080/index.html
 npm install brat-frontend-editor
 ```
 
-## Vanilla JavaScript
+### Vanilla JavaScript
 ```javascript
 //Make sure DOM is ready
 require('brat-frontend-editor')
@@ -37,7 +37,48 @@ var docData = {};
 var Brat = new BratFrontendEditor(elem, collData, docData);
 ```
 
-## TODO Angular2
+### Angular2
+```javascript
+var BratFrontendEditor: any; //TypeScript compiler
+require('brat-frontend-editor');
 
-## TODO React
+@Component({
+  // ...
+  template: '<div id="test"></div>':
+})
+export class ComponentX {
 
+  constructor(public appState: AppState, public title: Title) {
+  }
+
+  ngOnInit() {
+    var elem = document.getElementById("test");
+    var collData = { /* ... */ };
+    var docData = { /* ... */ };
+    var brat = new BratFrontendEditor(elem, collData, docData);
+  }
+}
+```
+
+### React
+require('brat-frontend-editor/dist/brat-frontend-editor');
+
+class ComponentX extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount(){
+    var elem = document.getElementById("test");
+    var collData = { /* ... */ };
+    var docData = { /* ... */ };
+    var brat = new BratFrontendEditor(elem, collData, docData);
+  }
+
+  render () {
+    return(
+      <div id="test" />
+    );
+  }
+}

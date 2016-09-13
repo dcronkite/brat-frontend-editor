@@ -1,8 +1,8 @@
 {
   "name": "brat-frontend-editor",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "description": "\"BRAT Editor standalone frontend library\"",
-  "main": "client/dist/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "npm run prepublish && http-server -p 8008",
     "babel-build": "babel --presets es2015 -d client/dist/ client/src/",

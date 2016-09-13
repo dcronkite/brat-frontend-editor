@@ -14,8 +14,14 @@ This version is full frontend working version of brat editing tools
 
 #### Root app as well as all examples can be executed with
 ```bash
+cd <targetted_app>
 npm install
 npm start #Then open browser on localhost:3000
+```
+
+#### Build dist repo
+```bash
+npm run prepublish
 ```
 
 ## Import module in your current application##
@@ -23,7 +29,7 @@ npm start #Then open browser on localhost:3000
 npm install brat-frontend-editor --save
 ```
 
-### Vanilla JavaScript
+#### Integration in vanilla JavaScript
 ```html
 <link rel="stylesheet" type="text/css" href="node_modules/brat-frontend-editor/dist/brat-frontend-editor.min.css"/>
 <script type="text/javascript" src="node_modules/brat-frontend-editor/dist/brat-frontend-editor.js"></script>
@@ -42,7 +48,7 @@ function window_onload() {
 }
 ```
 
-### Angular2
+#### Integration in Angular2
 ```javascript
 var BratFrontendEditor: any; //TypeScript compiler
 require('brat-frontend-editor');
@@ -65,7 +71,7 @@ export class ComponentX {
 }
 ```
 
-### React
+#### Integration in React
 ```javascript
 require('brat-frontend-editor/dist/brat-frontend-editor');
 
@@ -89,3 +95,5 @@ class ComponentX extends React.Component {
   }
 }
 ```
+
+####TODO: Fonts as well as some images aren't loaded correctly at this point (servers will return 404 status)

@@ -27,14 +27,22 @@ npm install brat-frontend-editor
 ```
 
 ### Vanilla JavaScript
+```html
+<link rel="stylesheet" type="text/css" href="node_modules/brat-frontend-editor/dist/brat-frontend-editor.min.css"/>
+<script type="text/javascript" src="node_modules/brat-frontend-editor/dist/brat-frontend-editor.js"></script>
+<body onLoad="window_onload()">
+    <div id="test"></div>
+</body>
+```
+
 ```javascript
-//Make sure DOM is ready
-require('brat-frontend-editor')
-//Make sure you included 'brat-frontend-editor/dist/brat-frontend-editor.min.css'
-var elem = document.getElementById("any");
-var collData = {};
-var docData = {};
-var Brat = new BratFrontendEditor(elem, collData, docData);
+function window_onload() {
+    //Making sure DOM is ready
+    var elem = document.getElementById("test");
+    var collData = { /*...*/ };
+    var docData = { /*...*/ };
+    var yolo = new BratFrontendEditor(elem, collData, docData);
+}
 ```
 
 ### Angular2
@@ -61,6 +69,7 @@ export class ComponentX {
 ```
 
 ### React
+```javascript
 require('brat-frontend-editor/dist/brat-frontend-editor');
 
 class ComponentX extends React.Component {
@@ -82,3 +91,4 @@ class ComponentX extends React.Component {
     );
   }
 }
+```

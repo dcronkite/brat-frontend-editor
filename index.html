@@ -3,19 +3,19 @@
 <head>
     <title>brat</title>
     <!--<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>-->
-    <link href="static/jquery-theme/jquery-ui-redmond.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="client/lib/head.load.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/brat-frontend-editor.min.css"/>
+    <script type="text/javascript" src="node_modules/headjs/dist/0.98/head.load.min.js"></script>
     <script type="text/javascript">
         head.js(
                 // libraries
-                'client/lib/jquery.min.js',
+                'client/lib/jquery.min.js',// 'client/lib/_jquery.min.js',
                 'client/lib/jquery-ui.min.js',
                 'client/lib/jquery.svg.min.js',
                 'client/lib/jquery.svgdom.min.js',
-                'client/lib/jquery.ba-bbq.min.js',
+                'node_modules/jquery-bbq/jquery.ba-bbq.min.js', //'client/lib/_jquery.ba-bbq.min.js',
                 'client/lib/jquery.sprintf.js',
                 'client/lib/jquery.json.min.js',
-                'client/lib/webfont.js',
+                'http://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js',
                 // brat helpers
                 'client/src/configuration.js',
                 'client/src/util.js',
@@ -445,8 +445,6 @@
         });
 
     </script>
-    <link rel="stylesheet" type="text/css" href="style-vis.css"/>
-    <link rel="stylesheet" type="text/css" href="style-ui.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 </head>
 <body>

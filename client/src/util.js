@@ -607,3 +607,8 @@ var Util = (function(window, undefined) {
     };
 
 })(window);
+
+// BRAT STANDALONE LIBRARY BEGIN
+// Browserify export
+module.exports = Util;
+// BRAT STANDALONE LIBRARY END

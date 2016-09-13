@@ -3156,3 +3156,8 @@ Util.profileStart('before render');
 
     return Visualizer;
 })(jQuery, window);
+
+// BRAT STANDALONE LIBRARY BEGIN
+// Browserify export
+module.exports = Visualizer;
+// BRAT STANDALONE LIBRARY END

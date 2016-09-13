@@ -2264,3 +2264,8 @@ var VisualizerUI = (function($, window, undefined) {
 
     return VisualizerUI;
 })(jQuery, window);
+
+// BRAT STANDALONE LIBRARY BEGIN
+// Browserify export
+module.exports = VisualizerUI;
+// BRAT STANDALONE LIBRARY END

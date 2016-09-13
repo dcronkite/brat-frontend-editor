@@ -102,4 +102,9 @@ var URLHash = (function($, window, undefined) {
     };
 
     return URLHash;
-})(jQuery, window)
+})(jQuery, window);
+
+// BRAT STANDALONE LIBRARY BEGIN
+// Browserify export
+module.exports = URLHash;
+// BRAT STANDALONE LIBRARY END

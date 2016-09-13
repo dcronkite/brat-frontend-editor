@@ -2639,3 +2639,8 @@ var AnnotatorUI = (function($, window, undefined) {
 
     return AnnotatorUI;
 })(jQuery, window);
+
+// BRAT STANDALONE LIBRARY BEGIN
+// Browserify export
+module.exports = AnnotatorUI;
+// BRAT STANDALONE LIBRARY END

@@ -255,7 +255,7 @@ var LocalAjax = (function($, window, undefined) {
                 };
         };
 
-        createRelation = function(data){
+        var createRelation = function(data){
             var e_type = data.collection.relation_types.find( x => x.type === data.type ); //Entity or Event
 
             if(!e_type){
@@ -439,3 +439,8 @@ var LocalAjax = (function($, window, undefined) {
 
     return LocalAjax;
 })(jQuery, window);
+
+// BRAT STANDALONE LIBRARY BEGIN
+// Browserify export
+module.exports = LocalAjax;
+// BRAT STANDALONE LIBRARY END

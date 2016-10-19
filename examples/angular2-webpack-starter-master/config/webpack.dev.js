@@ -121,9 +121,10 @@ module.exports = function(options) {
       }),
 
       new ProvidePlugin({
-        jQuery: 'jquery',
-        $: 'jquery',
-        jquery: 'jquery'
+        //Workaround to target brat jQuery version
+        jQuery: 'brat-frontend-editor/client/lib/node-jquery-1.7.1',
+        $: 'brat-frontend-editor/client/lib/node-jquery-1.7.1',
+        jquery: 'brat-frontend-editor/client/lib/node-jquery-1.7.1'
       }),
 
       /**

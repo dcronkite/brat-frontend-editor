@@ -70,7 +70,6 @@ export class Home {
           "labels" : ["Per", "P"],
           "bgColor": "#FE2E2E",
           "borderColor": "darken",
-          "children": [],
           "unused": false,
           "attributes": [
             "Notorious", "Polarity"

@@ -175,7 +175,12 @@ module.exports = function(options) {
         {
           test: /\.(jpg|png|gif)$/,
           loader: 'file'
-        }
+        },
+
+        // Bootstrap: https://github.com/AngularClass/angular2-webpack-starter/issues/215
+        { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass'] },
+        { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url?limit=10000' },
+        { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery' },
       ],
 
       postLoaders: [

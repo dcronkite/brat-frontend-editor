@@ -355,6 +355,7 @@ var LocalAjax = (function($, window, undefined) {
 
         var localExecution = function(data, callback, merge) {
             dispatcher.post('spin');
+            dispatcher.post('local-ajax-begin', [data]);
             that.collection = data.collection;
             that.document = data.document;
             var response = {};
@@ -430,6 +431,7 @@ var LocalAjax = (function($, window, undefined) {
             }
 
             dispatcher.post(0, callback, [response]);
+            dispatcher.post('local-ajax-done', [response]);
             dispatcher.post('unspin');
         };
 

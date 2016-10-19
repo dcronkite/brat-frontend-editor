@@ -151,3 +151,5 @@ var Ajax = (function($, window, undefined) {
 
     return Ajax;
 })(jQuery, window);
+
+module.exports = Ajax;

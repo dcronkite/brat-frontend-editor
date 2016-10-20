@@ -398,14 +398,18 @@
             ]
         };
 
-        var webFontsUrl = [
-            'node_modules/brat-frontend-editor/static/fonts/Astloch-Bold.ttf',
-            'node_modules/brat-frontend-editor/static/fonts/PT_Sans-Caption-Web-Regular.ttf',
-            'node_modules/brat-frontend-editor/static/fonts/Liberation_Sans-Regular.ttf'
-        ];
+        var options = {
+            assetsPath: "node_modules/brat-frontend-editor/static/",
+            webFontURLs: [
+                'fonts/Astloch-Bold.ttf',
+                'fonts/PT_Sans-Caption-Web-Regular.ttf',
+                'fonts/Liberation_Sans-Regular.ttf'
+            ],
+            ajax: 'local'
+        };
 
         function window_onload() {
-            var yolo = new BratFrontendEditor(document.getElementById("yolo"), collData, docData, webFontsUrl);
+            var yolo = new BratFrontendEditor(document.getElementById("yolo"), collData, docData, options);
         }
 
 

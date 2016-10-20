@@ -1,24 +1,27 @@
 window.$ = require('./client/lib/node-jquery-1.7.1'); //require('jquery-node-browserify'); // @1.7.2 ++
 
-window.BratFrontendEditor = function(element, collData, docData, webFontURLs, options) {
+window.BratFrontendEditor = function(element, collData, docData, options) {
     if (!(element instanceof Element)) {
         throw new Error('element should be an instance of Element');
     }
 
     collData = collData || {};
     docData = docData || {};
-    webFontURLs = webFontURLs || [
-        'static/fonts/Astloch-Bold.ttf',
-        'static/fonts/PT_Sans-Caption-Web-Regular.ttf',
-        'static/fonts/Liberation_Sans-Regular.ttf'
-    ];
-    options = options || {};
+    //DEFAULT OPTIONS
+    options = options || {
+        assetsPath: "static/fonts/",
+        webFontURLs: [
+            'static/fonts/Astloch-Bold.ttf',
+            'static/fonts/PT_Sans-Caption-Web-Regular.ttf',
+            'static/fonts/Liberation_Sans-Regular.ttf'
+        ],
+        ajax: 'local'
+    };
 
     this.element = element;
     this.options = options;
     this.collData = collData;
     this.docData = docData;
-    this.webFontURLs = webFontURLs;
     this.options = options;
     this.init();
 };
@@ -29,6 +32,8 @@ BratFrontendEditor.prototype = {
         var self = this;
         var html = require('./brat.html');
         self.element.innerHTML = html;
+        self.setHtmlImgSrc();
+
         window.jQuery = $;
         (function($){
             // require('./index.css'); //TODO: If possible, include css in min.js (browserify-css)
@@ -71,7 +76,12 @@ BratFrontendEditor.prototype = {
                         self.ajax = new LocalAjax(self.dispatcher);
                         break;
                 }
-                self.visualizer = new Visualizer(self.dispatcher, 'svg', self.webFontURLs);
+                var absoluteWebFontsURLS = [
+                    self.options.assetsPath + self.options.webFontURLs[0],
+                    self.options.assetsPath + self.options.webFontURLs[1],
+                    self.options.assetsPath + self.options.webFontURLs[2],
+                ];
+                self.visualizer = new Visualizer(self.dispatcher, 'svg', absoluteWebFontsURLS);
                 self.svg = self.visualizer.svg;
                 self.visualizerUI = new VisualizerUI(self.dispatcher, self.svg);
                 self.annotatorUI = new AnnotatorUI(self.dispatcher, self.svg);
@@ -85,6 +95,20 @@ BratFrontendEditor.prototype = {
             });
 
         })($);
+    },
+    setHtmlImgSrc: function(){
+        var spinners = this.element.getElementsByClassName("brat-spinner");
+        var magnifiers = this.element.getElementsByClassName("brat-fugue-shadowless-magnifier");
+        var externals = this.element.getElementsByClassName("brat-fugue-shadowless-external");
+
+        if(spinners && spinners.length){
+            spinners[0].src = this.options.assetsPath + 'img/spinner.gif';
+        }
+        if(magnifiers && magnifiers.length){
+            magnifiers[0].src = this.options.assetsPath + 'img/Fugue-shadowless-magnifier.png';
+        }
+        if(externals && externals.length){
+            externals[0].src = this.options.assetsPath + 'img/Fugue-shadowless-external.png';
+        }
     }
 };
-

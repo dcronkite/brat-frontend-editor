@@ -10,7 +10,7 @@
     "babelify-build": "browserify --debug index.js -o dist/brat-frontend-editor.js -t [ babelify --presets [ es2015 ] --compact true ] && npm run babel-unstrict",
     "browserify-build": "browserify --debug index.js -o dist/brat-frontend-editor.js -t [ stringify --extensions [.html] ] ",
     "browserify-css": "browserify --debug index-css.js -o dist/brat-frontend-editor-css.js -t [ browserify-css --autoInject=true --minify=true ]",
-    "cleancss": "cleancss --processImport -o  dist/brat-frontend-editor.min.css index.css",
+    "cleancss": "cleancss -o  dist/brat-frontend-editor.min.css index.css",
     "minify": "browserify dist/brat-frontend-editor.js -d -p [minifyify --no-map] > dist/brat-frontend-editor.min.js",
     "prepublish": "npm run browserify-build && npm run cleancss"
   },

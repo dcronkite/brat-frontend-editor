@@ -1,17 +1,25 @@
 window.$ = require('./client/lib/node-jquery-1.7.1'); //require('jquery-node-browserify'); // @1.7.2 ++
 
-window.BratFrontendEditor = function(element, collData, docData, options) {
+window.BratFrontendEditor = function(element, collData, docData, webFontURLs, options) {
     if (!(element instanceof Element)) {
         throw new Error('element should be an instance of Element');
     }
-    options = options || {};
+
     collData = collData || {};
     docData = docData || {};
+    webFontURLs = webFontURLs || [
+        'static/fonts/Astloch-Bold.ttf',
+        'static/fonts/PT_Sans-Caption-Web-Regular.ttf',
+        'static/fonts/Liberation_Sans-Regular.ttf'
+    ];
+    options = options || {};
 
     this.element = element;
     this.options = options;
     this.collData = collData;
     this.docData = docData;
+    this.webFontURLs = webFontURLs;
+    this.options = options;
     this.init();
 };
 
@@ -23,6 +31,7 @@ BratFrontendEditor.prototype = {
         self.element.innerHTML = html;
         window.jQuery = $;
         (function($){
+            // require('./index.css'); //TODO: If possible, include css in min.js (browserify-css)
             require('./client/lib/jquery-ui.min');
             require('./client/lib/jquery.svg.min');
             require('./client/lib/jquery.svgdom.min');
@@ -62,7 +71,7 @@ BratFrontendEditor.prototype = {
                         self.ajax = new LocalAjax(self.dispatcher);
                         break;
                 }
-                self.visualizer = new Visualizer(self.dispatcher, 'svg');
+                self.visualizer = new Visualizer(self.dispatcher, 'svg', self.webFontURLs);
                 self.svg = self.visualizer.svg;
                 self.visualizerUI = new VisualizerUI(self.dispatcher, self.svg);
                 self.annotatorUI = new AnnotatorUI(self.dispatcher, self.svg);

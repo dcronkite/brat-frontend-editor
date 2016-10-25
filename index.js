@@ -7,22 +7,31 @@ window.BratFrontendEditor = function(element, collData, docData, options) {
 
     collData = collData || {};
     docData = docData || {};
+    options = options || {};
+
     //DEFAULT OPTIONS
-    options = options || {
-        assetsPath: "static/fonts/",
+    newOptions = {
+        activateEdition: true,
+        assetsPath: "static/",
         webFontURLs: [
-            'static/fonts/Astloch-Bold.ttf',
-            'static/fonts/PT_Sans-Caption-Web-Regular.ttf',
-            'static/fonts/Liberation_Sans-Regular.ttf'
+            'fonts/Astloch-Bold.ttf',
+            'fonts/PT_Sans-Caption-Web-Regular.ttf',
+            'fonts/Liberation_Sans-Regular.ttf'
         ],
-        ajax: 'local'
+        ajax: 'local' // 'local', 'external' or 'normal'
     };
 
+    // If option defined, over-write newOptions
+    for(var opt in options){
+        if(options.hasOwnProperty(opt)){
+            newOptions[opt] = options[opt];
+        }
+    }
+
     this.element = element;
-    this.options = options;
     this.collData = collData;
     this.docData = docData;
-    this.options = options;
+    this.options = newOptions;
     this.init();
 };
 
@@ -83,9 +92,11 @@ BratFrontendEditor.prototype = {
                 ];
                 self.visualizer = new Visualizer(self.dispatcher, 'svg', absoluteWebFontsURLS);
                 self.svg = self.visualizer.svg;
-                self.visualizerUI = new VisualizerUI(self.dispatcher, self.svg);
-                self.annotatorUI = new AnnotatorUI(self.dispatcher, self.svg);
-                self.spinner = new Spinner(self.dispatcher, '#spinner');
+                if(self.options.activateEdition === true){
+                    self.visualizerUI = new VisualizerUI(self.dispatcher, self.svg);
+                    self.annotatorUI = new AnnotatorUI(self.dispatcher, self.svg);
+                    self.spinner = new Spinner(self.dispatcher, '#spinner');
+                }
                 self.dispatcher.post('init');
 
                 self.docData.collection = null;

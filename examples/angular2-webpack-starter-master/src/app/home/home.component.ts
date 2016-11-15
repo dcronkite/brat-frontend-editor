@@ -430,6 +430,9 @@ export class Home {
         'fonts/Liberation_Sans-Regular.ttf'
       ],
       ajax: 'local', //local(default), normal, external(Handle all 'ajax' actions by yourself)
+      activateEdition: true,
+      maxFragmentLength: 30
+
     };
     this.brat = new BratFrontendEditor(elem, collData, docData, options);
     this.brat.dispatcher.on('ajax', (data, callback, merge) => this.onExternalAjaxActions(data, callback, merge));

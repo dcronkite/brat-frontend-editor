@@ -30,13 +30,13 @@ npm install brat-frontend-editor --save
 ```
 
 #### Configuration
-| Options         | Values                          | Default    |
-| --------------- |:-------------------------------:| ----------:|
-| activateEdition | true of false                   | true       |
-| ajax            | 'local', 'external' or 'normal' | local      |
-| assetsPath      | path to public asset folder     | static/    |
-| maxSpanLength   | 0=no_max 1+=max characters      | 30         |
-| webFontURLs     | array of 3 paths                | ['fonts/Astloch-Bold.ttf','fonts/PT_Sans-Caption-Web-Regular.ttf','fonts/Liberation_Sans-Regular.ttf'] |
+| Options | Values | Default |
+| --- | --- | --- |
+| activateEdition | true of false | true |
+| ajax | 'local', 'external' or 'normal' | local |
+| assetsPath | path to public asset folder | static/ |
+| maxSpanLength | 0=no_max 1+=max characters | 30 |
+| webFontURLs | array of 3 paths | ['fonts/Astloch-Bold.ttf','fonts/PT_Sans-Caption-Web-Regular.ttf','fonts/Liberation_Sans-Regular.ttf'] |
 
 #### Integration in vanilla JavaScript
 ```html

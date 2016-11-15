@@ -389,7 +389,7 @@ export class Home {
       "text"     : "Ed O'Kelley was the man who shot the man who shot Jesse James.\nJ'ai lancé une bombe nucléaire sur Simon, Gustav et Pavel... sans raison particulière. Nos trois comparses se ne pouvant se venger sont allés directement au Paradis. Cette histoire est vraie. Ceci est la fin du paragraphe.\n Ceci est le second paragraphe. C'est l'histoire du petit castor le plus petit, mais le plus fort.",
       "entities" : [
         ["N1", "Person", [[0, 2], [5, 11]]], //TODO, name text-bound annotations Tn to be coherent with standoff brat format http://brat.nlplab.org/standoff.html
-        //["N2", "Person", [[20, 55], [55, 90], [90,124]]],
+        ["N2", "Person", [[20, 55]]],
         ["N3", "Person", [[37, 40]]],
         ["N4", "Object", [[78, 83], [84, 93]]],
         ["N5", "Person", [[98, 104]]],

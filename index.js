@@ -115,12 +115,12 @@ BratFrontendEditor.prototype = {
     },
     addLongAnnotationEntityAttribute: function(){
         // Special symbol for splitted long annotations
-        self.collData.entity_attribute_types.push( {
+        this.collData.entity_attribute_types.push( {
             "name": LONG_ANNOTATION_CONST,
             "type"  : LONG_ANNOTATION_CONST,
             "values": { LONG_ANNOTATION_CONST: { "glyph": "↹" } }
         });
-        self.collData.entity_types.forEach(function(type){
+        this.collData.entity_types.forEach(function(type){
             type.attributes.push(LONG_ANNOTATION_CONST);
         });
     },

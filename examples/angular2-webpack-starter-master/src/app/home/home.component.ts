@@ -421,8 +421,15 @@ export class Home {
         ["N1", "AnnotatorNotes", "test comment"]
       ]
     };
+    let assetsPath = "assets/static/";
     let options = {
-      'ajax': 'external', //local(default), normal, external(Handle all 'ajax' actions by yourself)
+      assetsPath: assetsPath,
+      webFontURLs: [
+        'fonts/Astloch-Bold.ttf',
+        'fonts/PT_Sans-Caption-Web-Regular.ttf',
+        'fonts/Liberation_Sans-Regular.ttf'
+      ],
+      ajax: 'local', //local(default), normal, external(Handle all 'ajax' actions by yourself)
     };
     this.brat = new BratFrontendEditor(elem, collData, docData, options);
     this.brat.dispatcher.on('ajax', (data, callback, merge) => this.onExternalAjaxActions(data, callback, merge));

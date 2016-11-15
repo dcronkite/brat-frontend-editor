@@ -398,8 +398,18 @@
             ]
         };
 
+        var options = {
+            assetsPath: "node_modules/brat-frontend-editor/static/",
+            webFontURLs: [
+                'fonts/Astloch-Bold.ttf',
+                'fonts/PT_Sans-Caption-Web-Regular.ttf',
+                'fonts/Liberation_Sans-Regular.ttf'
+            ],
+            ajax: 'local'
+        };
+
         function window_onload() {
-            var yolo = new BratFrontendEditor(document.getElementById("yolo"), collData, docData);
+            var yolo = new BratFrontendEditor(document.getElementById("yolo"), collData, docData, options);
         }
 
 

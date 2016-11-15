@@ -13,6 +13,7 @@ window.BratFrontendEditor = function(element, collData, docData, options) {
     newOptions = {
         activateEdition: true,
         assetsPath: "static/",
+        maxSpanLength: 30,
         webFontURLs: [
             'fonts/Astloch-Bold.ttf',
             'fonts/PT_Sans-Caption-Web-Regular.ttf',

@@ -122,6 +122,7 @@ var LocalAjax = (function($, window, undefined) {
                 ]);
             }
             return {
+                data: data,
                 action: data.action,
                 annotations: {
                     "source_files": data.document.source_files,
@@ -204,6 +205,7 @@ var LocalAjax = (function($, window, undefined) {
                 //Comments && Attributes are deactivated for relations at this point
 
                 return {
+                    data: data,
                     action: data.action,
                     annotations: {
                         "source_files": data.document.source_files,

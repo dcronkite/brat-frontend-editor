@@ -277,6 +277,7 @@ var Visualizer = (function($, window, undefined) {
         '\u00a0': 4,
         '\u200b': 0,
         '\u3000': 8,
+        '\u0009': 12, //Unicode tabulation
         '\n': 4
       };
       var coloredCurlies = true; // color curlies by box BG
@@ -2519,7 +2520,7 @@ Util.profileStart('chunkFinish');
           }
           var nextChunk = data.chunks[chunkNo + 1];
           var nextSpace = nextChunk ? nextChunk.space : '';
-          sentenceText.span(chunk.text + nextSpace, {
+          sentenceText.span(/*chunk.space +*/ chunk.text + nextSpace, {
             x: chunk.textX,
             y: chunk.row.textY,
             'data-chunk-id': chunk.index

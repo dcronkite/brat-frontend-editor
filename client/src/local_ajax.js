@@ -1,5 +1,5 @@
 var LocalAjax = (function($, window, undefined) {
-    var LocalAjax = function(dispatcher) {
+    var LocalAjax = function(dispatcher, maxFragmentLength) {
         var that = this;
 
         var findType = function (entityTypes, type) {
@@ -42,63 +42,10 @@ var LocalAjax = (function($, window, undefined) {
                     ]);
                 }
             }else{
-                //Validate max fragment length (doesn't work much with overlaps)
-                //Use discontinguity to fix long annotations glitches before calling BRAT rendering engine.
-                //TODO: Break fragments at line jumps if possible
-                //TODO: Make MAX_LENGTH dynamic depending on svg total width and zoom level
-                //TODO: Recalculate (fake) fragment offsets when resizing window
-                //TODO: Flag (fake) annotation fragments
-                //TODO: Reevaluate (fake) flagged fragments before sending annotation to backend service
-                var MAX_LENGTH = 80;
-                var new_offsets = [];
-
-                //if(offsets.find( x => (x[1] - x[0]) > MAX_LENGTH)){
-                //    offsets.forEach(function(fragment){
-                //        var from = fragment[0],
-                //            lastFrom = from,
-                //            to = fragment[1],
-                //            lastTo = from;
-                //        var i = 0;
-                //        while((to - lastFrom) > MAX_LENGTH){
-                //            lastFrom = lastTo;
-                //            lastTo = lastTo + MAX_LENGTH;
-                //            var subtext = "";
-                //            if(lastTo <= data.document.text.length){
-                //                subtext = data.document.text.substring(lastFrom, lastTo);
-                //            }
-                //            if(lastTo >= to ){
-                //                lastTo = to;
-                //            }else{
-                //                lastTo = lastFrom + subtext.lastIndexOf(' ');
-                //            }
-                //            new_offsets.push([lastFrom, lastTo]);
-                //            i++;
-                //        }
-                //    });
-                //}else{
-                    new_offsets = offsets;
-                //}
-
-
-                //Split by word based on space, supports overlaps but wrong results...
-                //Must discard spaces from annotations, so it is not contigius anymore...
-                /*var new_offsets = [];
-                offsets.forEach(function(fragment){
-                    var from = fragment[0],
-                        lastFrom = from,
-                        to = fragment[1],
-                        lastTo = from - 1,
-                        fragmentText = data.document.text.substring(from, to),
-                        array = fragmentText.split(" ");
-                    array.forEach(function(word){
-                        lastFrom = lastTo + 1;
-                        lastTo = lastFrom + word.length;
-                        new_offsets.push([lastFrom, lastTo]);
-                    });
-                });*/
+                var e_id = "N" + (that.document.entities.length + 1), //TODO: must absolutely be unique
+                    new_offsets = splitTooLongFragment(offsets, data, e_id);
 
                 //Entity
-                e_id = "N" + (that.document.entities.length + 1); //TODO: must absolutely be unique
                 data.document.entities.push([
                     e_id,
                     data.type,
@@ -107,12 +54,14 @@ var LocalAjax = (function($, window, undefined) {
             }
 
             for (var key in attrs) {
-                data.document.attributes.push([
-                    "A" + (that.document.attributes.length + 1), //TODO: must absolutely be unique,
-                    key,
-                    e_id,
-                    attrs[key]
-                ]);
+                if(attrs.hasOwnProperty(key) && attrs[key]){
+                    data.document.attributes.push([
+                        "A" + (that.document.attributes.length + 1), //TODO: must absolutely be unique,
+                        key,
+                        e_id,
+                        attrs[key]
+                    ]);
+                }
             }
             if(data.comment.length){
                 data.document.comments.push([
@@ -142,6 +91,40 @@ var LocalAjax = (function($, window, undefined) {
             };
         };
 
+        // Validate max fragment length based on options.maxFragmentLength
+        // Use discontinguity to fix long annotations glitches before calling BRAT rendering engine.
+        var splitTooLongFragment = function(offsets, data, e_id){
+            var new_offsets = [];
+
+            if(maxFragmentLength > 0 && offsets.find( x => (x[1] - x[0]) > maxFragmentLength)){
+                offsets.forEach(function(fragment){
+                    var from = fragment[0],
+                        to = fragment[1],
+                        subtext = data.document.text.substring(from, to);
+
+                    if(to - from > maxFragmentLength) {
+                        var from_end = from + (subtext.indexOf(' ')),
+                            to_start = to - (subtext.length - (subtext.lastIndexOf(' ') + 1));
+                        new_offsets.push([from, from_end ]);
+                        new_offsets.push([to_start, to]);
+
+                        // Add special attribute for symbolic representation
+                        data.document.attributes.push([
+                            "A" + (that.document.attributes.length + 1), //TODO: must absolutely be unique,
+                            LONG_ANNOTATION_CONST,
+                            e_id,
+                            [from,to]
+                        ]);
+                    }else{
+                        new_offsets.push([from, to ]);
+                    }
+                });
+            }else{
+                new_offsets = offsets;
+            }
+            return new_offsets;
+        };
+
         var editAnnotation = function(data){
             var e_type = {}, //Entity or Trigger
                 attrs = JSON.parse(data.attributes),
@@ -161,7 +144,7 @@ var LocalAjax = (function($, window, undefined) {
                 //Entity annotation
                 var entity = data.document.entities.find( x => x[0] === data.id );
                 entity[1] = data.type;
-                entity[2] = offsets;
+                entity[2] = splitTooLongFragment(offsets, data, data.id);
                 e_type = findType(data.collection.entity_types, data.type);
 
             }else{
@@ -177,14 +160,16 @@ var LocalAjax = (function($, window, undefined) {
 
                 //Re-add all attributes
                 for (var key in attrs) {
-                    existing_attrs.find(x => x[1] === key);
+                    if(attrs.hasOwnProperty(key) && attrs[key]) {
+                        existing_attrs.find(x => x[1] === key);
 
-                    data.document.attributes.push([
-                        "A" + (that.document.attributes.length + 1), //TODO: must absolutely be unique,
-                        key,
-                        data.id,
-                        attrs[key]
-                    ]);
+                        data.document.attributes.push([
+                            "A" + (that.document.attributes.length + 1), //TODO: must absolutely be unique,
+                            key,
+                            data.id,
+                            attrs[key]
+                        ]);
+                    }
                 }
 
                 //Add/Edit comment content

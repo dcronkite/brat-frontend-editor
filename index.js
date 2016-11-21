@@ -1,4 +1,5 @@
 window.$ = require('./client/lib/node-jquery-1.7.1'); //require('jquery-node-browserify'); // @1.7.2 ++
+LONG_ANNOTATION_CONST = "LongAnnotation";
 
 window.BratFrontendEditor = function(element, collData, docData, options) {
     if (!(element instanceof Element)) {
@@ -13,6 +14,7 @@ window.BratFrontendEditor = function(element, collData, docData, options) {
     newOptions = {
         activateEdition: true,
         assetsPath: "static/",
+        maxFragmentLength: 30,
         webFontURLs: [
             'fonts/Astloch-Bold.ttf',
             'fonts/PT_Sans-Caption-Web-Regular.ttf',
@@ -74,7 +76,7 @@ BratFrontendEditor.prototype = {
                 self.dispatcher = new Dispatcher();
                 switch(self.options.ajax) {
                     case 'local':
-                        self.ajax = new LocalAjax(self.dispatcher);
+                        self.ajax = new LocalAjax(self.dispatcher, self.options.maxFragmentLength);
                         break;
                     case 'normal':
                         self.ajax = new Ajax(self.dispatcher);
@@ -82,7 +84,7 @@ BratFrontendEditor.prototype = {
                     case 'external':
                         break;
                     default:
-                        self.ajax = new LocalAjax(self.dispatcher);
+                        self.ajax = new LocalAjax(self.dispatcher, self.options.maxFragmentLength);
                         break;
                 }
                 var absoluteWebFontsURLS = [
@@ -99,6 +101,10 @@ BratFrontendEditor.prototype = {
                 }
                 self.dispatcher.post('init');
 
+                if(self.options.maxFragmentLength > 0){
+                    self.addLongAnnotationEntityAttribute();
+                }
+
                 self.docData.collection = null;
                 self.dispatcher.post('collectionLoaded', [self.collData]);
                 self.dispatcher.post('requestRenderData', [self.docData]);
@@ -106,6 +112,17 @@ BratFrontendEditor.prototype = {
             });
 
         })($);
+    },
+    addLongAnnotationEntityAttribute: function(){
+        // Special symbol for splitted long annotations
+        this.collData.entity_attribute_types.push( {
+            "name": LONG_ANNOTATION_CONST,
+            "type"  : LONG_ANNOTATION_CONST,
+            "values": { LONG_ANNOTATION_CONST: { "glyph": "↹" } }
+        });
+        this.collData.entity_types.forEach(function(type){
+            type.attributes.push(LONG_ANNOTATION_CONST);
+        });
     },
     setHtmlImgSrc: function(){
         var spinners = this.element.getElementsByClassName("brat-spinner");

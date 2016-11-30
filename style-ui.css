@@ -3,16 +3,16 @@
 
 /* Styling for the user-interface */
 
-html {
+#brat-frontend-editor #brat-frontend-editor html {
   overflow-y: scroll;
 }
 
-#navbuttons * {
+#brat-frontend-editor #navbuttons * {
   vertical-align: middle;
   padding: 2px 5px;
   float: left;
 }
-#header {
+#brat-frontend-editor #header {
   position: fixed;
   top: 0;
   left: 0;
@@ -21,30 +21,30 @@ html {
   -webkit-box-shadow: 5px 5px 5px #999999;
   box-shadow: 5px 5px 5px #999999;
 }
-#mainHeader {
+#brat-frontend-editor #mainHeader {
   font-size: 120%;
   overflow: hidden;
   white-space: nowrap;
 }
 
-#pulldown {
+#brat-frontend-editor #pulldown {
   display: none;
   font-size: 80%;
 }
-#pulldown_padder {
+#brat-frontend-editor #pulldown_padder {
   padding: 10px;
 }
-#pulldown div + div {
+#brat-frontend-editor #pulldown div + div {
   margin-top: 10px;
 }
-#auth_button {
+#brat-frontend-editor #auth_button {
   float: right;
 }
-#options_button {
+#brat-frontend-editor #options_button {
   float: right;
 }
 
-#pulluptrigger {
+#brat-frontend-editor #pulluptrigger {
   height: 35px;
   width:  35px;
   position: fixed;
@@ -52,88 +52,88 @@ html {
   left: 0;
   background: url('static/img/Fugue-shadowless-information-balloon.png') center no-repeat;
 }
-#messagepullup {
+#brat-frontend-editor #messagepullup {
   max-height: 300px;
   overflow-y: scroll; /* or 'auto' */
   background-color: #ffffff;
   background-color: rgba(255,255,255,0.75);
   z-index: 1;
 }
-#messages {
+#brat-frontend-editor #messages {
   z-index: 4;
 }
-#pulluptrigger {
+#brat-frontend-editor #pulluptrigger {
   z-index: 3;
 }
-.messages {
+#brat-frontend-editor .messages {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
 }
-.messages > div {
+#brat-frontend-editor .messages > div {
   padding: 5px;
   margin: 2px 5px;
   border: 1px outset #000000;
 }
 
-.messages > div.error {
+#brat-frontend-editor .messages > div.error {
   background-color: #FF9696;
   font-weight: bold;
   color: #000000;
 }
-.messages > div.warning {
+#brat-frontend-editor .messages > div.warning {
   background-color: #FFE2A3;
   font-weight: bold;
   color: #000000;
 }
-.messages > div.comment {
+#brat-frontend-editor .messages > div.comment {
   background-color: #87b6d9;
   color: #ffffff;
   font-weight: bold;
   border: 1px outset #27628F;
 }
-.messages > div.debug {
+#brat-frontend-editor .messages > div.debug {
   background-color: #ffff99;
   color: #000000;
 }
 
-.messages > div > input {
+#brat-frontend-editor .messages > div > input {
   float: right;
   display: block;
 }
 
-#notes_container {
+#brat-frontend-editor #notes_container {
   position: relative;
 }
-#norm_container {
+#brat-frontend-editor #norm_container {
   position: relative;
 }
-#arc_notes:disabled {
+#brat-frontend-editor #arc_notes:disabled {
   background-color:#FCFDFD;
 }
-#arc_notes_fieldset:disabled {
+#brat-frontend-editor #arc_notes_fieldset:disabled {
   border: 1px solid #BBBBBB;
 }
-#arc_notes_fieldset:disabled legend {
+#brat-frontend-editor #arc_notes_fieldset:disabled legend {
   background-color: #BBBBBB;
 }
-#clear_notes_button, #clear_norm_button {                   
+#brat-frontend-editor #clear_notes_button, #clear_norm_button {                   
   padding: 2px 5px;
   position: absolute;
   top: -2px;
   right: -2px;
 }
-.span_norm_txt_input {
+#brat-frontend-editor .span_norm_txt_input {
   background-color: #eaf4fd;
 }
-input.valid_value {
+#brat-frontend-editor input.valid_value {
   background-color: #ccffcc;
 }
-input.invalid_value {
+#brat-frontend-editor input.invalid_value {
   background-color: #ffcccc;
 }
-#norm_search_result_select {
+#brat-frontend-editor #norm_search_result_select {
   height: 200px;
   display: inline-block;
   border: 2px inset;
@@ -143,31 +143,31 @@ input.invalid_value {
   margin-top: 10px;
   overflow: scroll;
 }
-#norm_search_result_select thead tr * {
+#brat-frontend-editor #norm_search_result_select thead tr * {
   padding: 2px 5px;
 }
-#norm_search_result_select tbody tr * {
+#brat-frontend-editor #norm_search_result_select tbody tr * {
   padding: 0 5px;
 }
-#norm_search_result_select tr {
+#brat-frontend-editor #norm_search_result_select tr {
   cursor: pointer;
 }
-#norm_search_result_select tr * {
+#brat-frontend-editor #norm_search_result_select tr * {
   white-space: nowrap;
 }
-#norm_search_result_select tr.selected {
+#brat-frontend-editor #norm_search_result_select tr.selected {
   background-color: #cccccc;
 }
-#norm_search_container {
+#brat-frontend-editor #norm_search_container {
   position: relative;
 }
-#norm_search_button {
+#brat-frontend-editor #norm_search_button {
   position: absolute;
   top: -6px;
   right: -2px;
 }
 
-#span_form .collapser {
+#brat-frontend-editor #span_form .collapser {
     float: left;
     height: 16px;
     width: 16px;
@@ -175,43 +175,43 @@ input.invalid_value {
     cursor: hand;
     background: url('static/img/expand_icon.gif') no-repeat;
 }
-#span_form .collapser.open {
+#brat-frontend-editor #span_form .collapser.open {
     background: url('static/img/collapse_icon.gif') no-repeat;
 }
-#span_form .collapsible.open {
+#brat-frontend-editor #span_form .collapsible.open {
     display: block;
 }
-#span_form .collapsible {
+#brat-frontend-editor #span_form .collapsible {
     display: none;
 }
-#span_form .item_content {
+#brat-frontend-editor #span_form .item_content {
     margin-left: 16px;
     white-space: nowrap;
 }
-#span_form .collapsible {
+#brat-frontend-editor #span_form .collapsible {
     margin-left: 20px;
 }
-.type_scroller { /* TODO remove */
+#brat-frontend-editor .type_scroller { /* TODO remove */
     overflow-y: scroll;
     min-height: 50px;
     max-height: 300px;
 }
 
 /* BEGIN new entity and event dialog style */
-.split_wrapper {
+#brat-frontend-editor .split_wrapper {
   height: 300px;
   /* HACK tweaking to avoid overflows. */
   padding-bottom: 2.5em;
   /* end HACK */
 }
-.split_wrapper div.wrapper_full_width {
+#brat-frontend-editor .split_wrapper div.wrapper_full_width {
   width: 100%;
   height: 100%;
   display: inline-block;
   vertical-align: top;
   float: left;
 }
-.split_wrapper div.wrapper_half_left {
+#brat-frontend-editor .split_wrapper div.wrapper_half_left {
   /* a bit less than 50% to avoid scrollbar overflows */
   width: 49%;
   height: 100%;
@@ -219,7 +219,7 @@ input.invalid_value {
   vertical-align: top;
   float: left;
 }
-.split_wrapper div.wrapper_half_right {
+#brat-frontend-editor .split_wrapper div.wrapper_half_right {
   /* a bit less than 50% to avoid scrollbar overflows */
   width: 49%;
   height: 100%;
@@ -227,85 +227,85 @@ input.invalid_value {
   vertical-align: top;
   float: right;
 }
-.split_wrapper div.scroll_wrapper_upper {
+#brat-frontend-editor .split_wrapper div.scroll_wrapper_upper {
   width: 100%;
   height: 85%;
   display: inline-block;
   vertical-align: top;
 }
-.split_wrapper div.scroll_wrapper_lower {
+#brat-frontend-editor .split_wrapper div.scroll_wrapper_lower {
   width: 100%;
   height: 15%;
   display: inline-block;
   vertical-align: bottom;
 }
-.wrapper_lower_label {
+#brat-frontend-editor .wrapper_lower_label {
   margin-top: 0.5em;
 }
-div.scroll_wrapper_lower div {
+#brat-frontend-editor div.scroll_wrapper_lower div {
  padding-top: 0.5em;
 }
-.split_wrapper div.scroll_wrapper_full {
+#brat-frontend-editor .split_wrapper div.scroll_wrapper_full {
   width: 100%;
   height: 100%;
   display: inline-block;
   vertical-align: top;
 }
-.split_wrapper fieldset {
+#brat-frontend-editor .split_wrapper fieldset {
   height: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-.split_wrapper div.scroller {
+#brat-frontend-editor .split_wrapper div.scroller {
   overflow: auto;
   width: 100%;
   height: 100%;
   border-style: inset inset none none;
   border-width: 1px;
 }
-div.scroll_wrapper_upper div.scroller {
+#brat-frontend-editor div.scroll_wrapper_upper div.scroller {
   border-style: inset inset inset none;
 }
 /* special-case visual tweak; not sure why this is necessary */
-#span_search_fieldset {
+#brat-frontend-editor #span_search_fieldset {
   margin-bottom: 0.5em;
 } 
 /* END new entity and event dialog style */
 
-.small-buttons .ui-button-text {
+#brat-frontend-editor .small-buttons .ui-button-text {
   padding: 2px 5px;
 }
 
-#document_ctime, #document_mtime {
+#brat-frontend-editor #document_ctime, #document_mtime {
   vertical-align: bottom;                 
   padding: 0 5px;
   float: left;
 }
-#help_link {
+#brat-frontend-editor #help_link {
   padding-right: 0.5em;
   color: darkgray;
   vertical-align: center;
   float: right;
 }
-.document_edit_time {
+#brat-frontend-editor .document_edit_time {
   font-family: monospace;
   color: #777;
 }
-#menu_explanation {
+#brat-frontend-editor #menu_explanation {
   margin-left: 10px;
   display: inline-block;
   overflow: hidden;
 }
-#document_name {
+#brat-frontend-editor #document_name {
   margin-right: 100px;
 }
-#document_name input {
+#brat-frontend-editor #document_name input {
   width: 100%;
   border: none;
 }
 
 /*
-#logo {
+#brat-frontend-editor #logo {
   float:right;
   margin-left: 20px;
   background-color: #ffffff;
@@ -313,7 +313,7 @@ div.scroll_wrapper_upper div.scroller {
 }
 */
 
-.logo {
+#brat-frontend-editor .logo {
   font-family: 'Astloch', serif;
   font-style: normal;
   text-decoration: none;
@@ -325,7 +325,7 @@ div.scroll_wrapper_upper div.scroller {
   font-weight: bold;
 }
 
-#mainlogo {
+#brat-frontend-editor #mainlogo {
   font-size: 1.2em;
   float: right;
   cursor: pointer;
@@ -333,7 +333,7 @@ div.scroll_wrapper_upper div.scroller {
   padding: 0 10px 0 20px;
 }
 
-#aboutlogo {
+#brat-frontend-editor #aboutlogo {
   font-size: 42px;
   text-align: center;
   text-shadow: #888888 0 0 10px;
@@ -342,23 +342,23 @@ div.scroll_wrapper_upper div.scroller {
   margin-bottom: 10px;
 }
 
-#copyright {
+#brat-frontend-editor #copyright {
   margin-top: 10px;
   font-size: 60%;
 }
 
-#logo:hover {
+#brat-frontend-editor #logo:hover {
   opacity: 0.8;
 }
 
-#search_button {
+#brat-frontend-editor #search_button {
   margin-right: 0;
 }
-#search_button_label {
+#brat-frontend-editor #search_button_label {
   margin-right: 0;
 
 }
-#clear_search_button {
+#brat-frontend-editor #clear_search_button {
   margin-left: 0;
   padding-left: 0.4em;
   padding-right: 0.4em;
@@ -367,14 +367,14 @@ div.scroll_wrapper_upper div.scroller {
   border-radius: 0px 5px 5px 0px;
 }
 
-#spinner {
+#brat-frontend-editor #spinner {
   display: none;
   position: fixed;
   right:10px;
   top: 55px;
 }
 
-#document_select {
+#brat-frontend-editor #document_select {
   height: 200px;
   display: inline-block;
   border: 2px inset;
@@ -384,119 +384,119 @@ div.scroll_wrapper_upper div.scroller {
   margin-top: 10px;
   overflow: scroll;
 }
-#document_select thead tr * {
+#brat-frontend-editor #document_select thead tr * {
   padding: 2px 5px;
 }
-#document_select tbody tr * {
+#brat-frontend-editor #document_select tbody tr * {
   padding: 0 5px;
 }
-#document_select tr {
+#brat-frontend-editor #document_select tr {
   cursor: pointer;
 }
-#document_select tr * {
+#brat-frontend-editor #document_select tr * {
   white-space: nowrap;
 }
-#document_select tr.selected {
+#brat-frontend-editor #document_select tr.selected {
   background-color: #cccccc;
 }
-#document_select img {
+#brat-frontend-editor #document_select img {
   width: 16px;
   height: 16px;
 }
-#collection_browser th {
+#brat-frontend-editor #collection_browser th {
   font-weight: normal;
   text-align: left;
 }
-#readme {
+#brat-frontend-editor #readme {
   width: 100%;
   height: 20px;
   overflow: auto;
 }
 
-#import_text {
+#brat-frontend-editor #import_text {
   font-family: inherit;
 }
-#export_page div {
+#brat-frontend-editor #export_page div {
   margin: 5px 5px 5px 5px;
   font-size: 14px;
 }
-#export_page table {
+#brat-frontend-editor #export_page table {
   border-collapse: collapse;
   border: 1px solid #cccccc;
 }
-#export_page td, #export_page th {
+#brat-frontend-editor #export_page td, #export_page th {
   padding: 2px 5px;
   text-align: left;
 }
-#export_page tr.background0 {
+#brat-frontend-editor #export_page tr.background0 {
   background-color: #eeeeee;
 }
-#export_page tr.background1 {
+#brat-frontend-editor #export_page tr.background1 {
   background-color: #dddddd;
 }
-.optionRow {
+#brat-frontend-editor .optionRow {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
-.optionLabel {
+#brat-frontend-editor .optionLabel {
   display: inline-block;
   width: 8em;
 }
-#advanced_search_option_toggle {
+#brat-frontend-editor #advanced_search_option_toggle {
   float: right;                      
   font-size: 80%;
   color: gray;
 }
 
-#browserwarning {
+#brat-frontend-editor #browserwarning {
   background-color: #ffcccc;
   padding: 10px;
   display: none;
 }
-.ui-icon-gripsmall-diagonal-se {
+#brat-frontend-editor .ui-icon-gripsmall-diagonal-se {
   margin: 0 -3px -3px 0;
 }
-.ui-dialog {
+#brat-frontend-editor .ui-dialog {
   position: fixed;
 }
 
-.file {
+#brat-frontend-editor .file {
   color: #333366;
 }
-.collection {
+#brat-frontend-editor .collection {
   color: #336633;
 }
-.rightalign {
+#brat-frontend-editor .rightalign {
   text-align: right;
 }
-.centeralign {
+#brat-frontend-editor .centeralign {
   text-align: center;
 }
 
-.dialog .borderless {
+#brat-frontend-editor .dialog .borderless {
   outline: 0;
   border: 0;
   width: 100%;
 }
-.fullwidth {
+#brat-frontend-editor .fullwidth {
   width: 100%;
 }
 
-.autocomplete-id {
+#brat-frontend-editor .autocomplete-id {
   font-size: 80%;
   float: right;
 }
-.ui-autocomplete {
+#brat-frontend-editor .ui-autocomplete {
   max-height: 100px;
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 20px;
 }
 
-#waiter {
+#brat-frontend-editor #waiter {
   text-align: center;
 }
-#waiter img {
+#brat-frontend-editor #waiter img {
   margin-top: 25px;
 }
 

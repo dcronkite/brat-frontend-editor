@@ -432,9 +432,10 @@ export class Home {
       ajax: 'local', //local(default), normal, external(Handle all 'ajax' actions by yourself)
     };
     this.brat = new BratFrontendEditor(elem, collData, docData, options);
-    this.brat.dispatcher.on('ajax', (data, callback, merge) => this.onExternalAjaxActions(data, callback, merge));
-    this.brat.dispatcher.on('local-ajax-begin', this.onBeforeLocalAjaxActions);
-    this.brat.dispatcher.on('local-ajax-done', this.onAfterLocalAjaxActions);
+    this.brat.dispatcher.post('unspin');
+    // this.brat.dispatcher.on('ajax', (data, callback, merge) => this.onExternalAjaxActions(data, callback, merge));
+    // this.brat.dispatcher.on('local-ajax-begin', this.onBeforeLocalAjaxActions);
+    // this.brat.dispatcher.on('local-ajax-done', this.onAfterLocalAjaxActions);
   }
 
   private onExternalAjaxActions(data, callback, merge) {

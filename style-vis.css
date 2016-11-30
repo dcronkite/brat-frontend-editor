@@ -5,18 +5,18 @@
 
 /* alternative font test */
 /*
-text {
+#brat-frontend-editor text {
   font-size: 13px;
   font-family: helvetica,arial,freesans,clean,sans-serif;
 }
 */
 
-#svg {
+#brat-frontend-editor #svg {
   margin: 34px auto 100px;
   padding-top: 15px;
 }
 
-.center_wrapper {
+#brat-frontend-editor .center_wrapper {
   display: table;
   position: absolute;
   top: 0;
@@ -24,11 +24,11 @@ text {
   height: 100%;
   width: 100%;
 }
-.center_wrapper > div {
+#brat-frontend-editor .center_wrapper > div {
   display: table-cell;
   vertical-align: middle;
 }
-.center_wrapper > div > div {
+#brat-frontend-editor .center_wrapper > div > div {
   /* match jQuery UI .ui-widget-content color */
   color: #2e6e9e;
   margin-left: auto;
@@ -37,43 +37,43 @@ text {
   font-size: 12px;
   font-family: 'Liberation Sans', Verdana, Arial, Helvetica, sans-serif;
 }
-.center_wrapper > div > div h1 {
+#brat-frontend-editor .center_wrapper > div > div h1 {
   text-align: center;
   font-size: 14px;
 }
-#no_svg_wrapper {
+#brat-frontend-editor #no_svg_wrapper {
   display: none;
 }
 
-svg {
+#brat-frontend-editor svg {
   width: 100%;
   height: 1px;
   border: 1px solid #7fa2ff;
   font-size: 15px;
   /* font-size: 14px; */
 }
-svg.reselect {
+#brat-frontend-editor svg.reselect {
   border: 1px solid #ff3333;
 }
 
 /* "basic" font */
-text {
+#brat-frontend-editor text {
   font-size: 13px;
   font-family: 'Liberation Sans', Verdana, Arial, Helvetica, sans-serif;
 }
 
-@-webkit-keyframes pulse {
+#brat-frontend-editor @-webkit-keyframes pulse {
   0% { color: #9999ff; margin-top: 0; }
   50% { color: #ffffff; margin-top: 7px; }
   100% { color: #9999ff; margin-top: 0; }
 }
 
-path {
+#brat-frontend-editor path {
   pointer-events: none;
 }
 
 /* "basic" font */
-.span text {
+#brat-frontend-editor .span text {
   /*  font-size: 10.5px; */
   font-size: 10px;
   text-anchor: middle;
@@ -82,103 +82,103 @@ path {
 }
 
 /* this should likely match span font */
-.span_type_label {
+#brat-frontend-editor .span_type_label {
   font-size: 11px;
   font-family: 'PT Sans Caption', sans-serif;
 }
 /* this should likely match arc font */
-.arc_type_label {
+#brat-frontend-editor .arc_type_label {
   font-size: 11px;
   font-family: 'PT Sans Caption', sans-serif;
 }
-.attribute_type_label .ui-button-text {
+#brat-frontend-editor .attribute_type_label .ui-button-text {
   font-size: 11px;
   font-family: 'PT Sans Caption', sans-serif;
 }
 
-.span rect {
+#brat-frontend-editor .span rect {
   stroke-width: 0.75;
 }
 
-.glyph {
+#brat-frontend-editor .glyph {
   fill: #444444;
   font-family: sans-serif;
   font-weight: bold;
 }
-.attribute_warning {
+#brat-frontend-editor .attribute_warning {
   stroke: red;
 }
 
-.span rect.False_positive {
+#brat-frontend-editor .span rect.False_positive {
   stroke: #ff4141;
   stroke-width: 2;
 }
 
-.shadow_True_positive {
+#brat-frontend-editor .shadow_True_positive {
   fill: #00ff00;
 }
 
-.shadow_False_positive {
+#brat-frontend-editor .shadow_False_positive {
   fill: #ff4141;
 }
 
-#commentpopup.comment_False_positive {
+#brat-frontend-editor #commentpopup.comment_False_positive {
   background-color: #ff4141;
 }
 
-.span rect.False_negative {
+#brat-frontend-editor .span rect.False_negative {
   stroke: #c20000;
   fill: #ffffff;
   stroke-width: 2;
 }
 
-.shadow_False_negative {
+#brat-frontend-editor .shadow_False_negative {
   fill: #c20000;
 }
 
-#commentpopup.comment_False_negative {
+#brat-frontend-editor #commentpopup.comment_False_negative {
   background-color: #c20000;
 }
 
-.span rect.AnnotationError {
+#brat-frontend-editor .span rect.AnnotationError {
   stroke-width: 1;
 }
 
-.shadow_AnnotationError {
+#brat-frontend-editor .shadow_AnnotationError {
   fill: #ff0000;
 }
 
-#commentpopup.comment_AnnotationError {
+#brat-frontend-editor #commentpopup.comment_AnnotationError {
   background-color: #ff7777;
 }
 
-.span rect.AnnotationWarning {
+#brat-frontend-editor .span rect.AnnotationWarning {
   stroke-width: 1;
 }
 
-.shadow_AnnotationWarning {
+#brat-frontend-editor .shadow_AnnotationWarning {
   fill: #ff8800;
 }
 
-#commentpopup.comment_AnnotationWarning {
+#brat-frontend-editor #commentpopup.comment_AnnotationWarning {
   background-color: #ff9900;
 }
 
-.shadow_AnnotatorNotes {
+#brat-frontend-editor .shadow_AnnotatorNotes {
   /* fill: #00cc00; */
   fill: #3ab7ee;
 }
-#commentpopup.comment_AnnotatorNotes {
+#brat-frontend-editor #commentpopup.comment_AnnotatorNotes {
   /* background-color: #00cc00; */
   /* background-color: #DAF7DC; */
   background-color: #d7e7ee;
 }
 
-.shadow_Normalized {
+#brat-frontend-editor .shadow_Normalized {
   /* fill: #00cc00; */
   fill: #3aee37;
 }
-#commentpopup.comment_Normalized {
+#brat-frontend-editor #commentpopup.comment_Normalized {
   /* background-color: #00cc00; */
   /* background-color: #DAF7DC; */
   background-color: #d7eee7;
@@ -187,94 +187,94 @@ rect.Normalized {
   stroke-width: 1.5;
 }
 
-.shadow_AnnotationIncomplete {
+#brat-frontend-editor .shadow_AnnotationIncomplete {
   fill: #aaaaaa;
 }
-.span rect.AnnotationIncomplete {
+#brat-frontend-editor .span rect.AnnotationIncomplete {
   stroke: #002200;
   stroke-width: 0.5;
   fill: #ffffff;
 }
-#commentpopup.comment_AnnotationIncomplete {
+#brat-frontend-editor #commentpopup.comment_AnnotationIncomplete {
   background-color: #ffff77;
 }
 
-.shadow_AnnotationUnconfirmed {
+#brat-frontend-editor .shadow_AnnotationUnconfirmed {
   fill: #eeeeee;
 }
-.span rect.AnnotationUnconfirmed {
+#brat-frontend-editor .span rect.AnnotationUnconfirmed {
   stroke: #002200;
   stroke-width: 0.5;
   opacity : 0.5;
 }
-#commentpopup.comment_AnnotationUnconfirmed {
+#brat-frontend-editor #commentpopup.comment_AnnotationUnconfirmed {
   background-color: #ddddff;
 }
 
-.span rect.True_positive {
+#brat-frontend-editor .span rect.True_positive {
   /* stroke: #007700; */
 }
 
-rect.shadow_EditHighlight {
+#brat-frontend-editor rect.shadow_EditHighlight {
   fill: #ffff99;
 }
-.shadow_EditHighlight_arc {
+#brat-frontend-editor .shadow_EditHighlight_arc {
   stroke: #ffff99;
 }
 
-.span path {
+#brat-frontend-editor .span path {
   fill: none;
 }
 
-.span path.curly {
+#brat-frontend-editor .span path.curly {
   /* 'stroke' def here blocks 'stroke' set in JS..? */
   /* stroke: grey; */
   stroke-width: 0.5;
 }
 
-.span path.boxcross {
+#brat-frontend-editor .span path.boxcross {
   stroke: black;
   opacity: 0.5;
 }
 
-.arcs path {
+#brat-frontend-editor .arcs path {
   stroke: #989898;
   fill: none;
   stroke-width: 1;
 }
 
-.arcs .highlight path {
+#brat-frontend-editor .arcs .highlight path {
   stroke: #000000;
   stroke-width: 1.5;
   opacity: 1;
 }
-.arcs .highlight text {
+#brat-frontend-editor .arcs .highlight text {
   stroke: black;
   fill: black;
   stroke-width: 0.5;
 }
-.span.highlight rect {
+#brat-frontend-editor .span.highlight rect {
   stroke-width: 2px;
 }
-.span rect.reselect {
+#brat-frontend-editor .span rect.reselect {
   stroke-width: 2px;
 }
-.span rect.reselectTarget {
+#brat-frontend-editor .span rect.reselectTarget {
   stroke-width: 2px;
 }
-.arcs .reselect path {
+#brat-frontend-editor .arcs .reselect path {
   stroke-width: 2px;
   stroke: #ff0000 !important;
 }
-.arcs .reselect text {
+#brat-frontend-editor .arcs .reselect text {
   fill: #ff0000 !important;
 }
 
-.span rect.badTarget {
+#brat-frontend-editor .span rect.badTarget {
   stroke: #f00;
 }
 
-.arcs text {
+#brat-frontend-editor .arcs text {
   font-size: 9px;
   text-anchor: middle;
   font-family: 'PT Sans Caption', sans-serif;
@@ -282,50 +282,50 @@ rect.shadow_EditHighlight {
   cursor: default;
 }
 
-.background0 {
+#brat-frontend-editor .background0 {
   stroke: none;
   fill: #ffffff;
 }
 
-.background1 {
+#brat-frontend-editor .background1 {
   stroke: none;
   fill: #eeeeee;
 }
 
-.backgroundHighlight {
+#brat-frontend-editor .backgroundHighlight {
   stroke: none;
   fill: #ffff99;
 }
 
-.sentnum text {
+#brat-frontend-editor .sentnum text {
   fill: #999999;
   text-anchor: end;
 }
 
-.sentnum path {
+#brat-frontend-editor .sentnum path {
   stroke: #999999;
   stroke-width: 1px;
 }
 
-.span_cue {
+#brat-frontend-editor .span_cue {
   fill: #eeeeee !important;
 }
 
-.drag_stroke {
+#brat-frontend-editor .drag_stroke {
   stroke: black;
 }
-.drag_fill {
+#brat-frontend-editor .drag_fill {
   fill: black;
 }
 
 
-.dialog {
+#brat-frontend-editor .dialog {
   display: none;
 }
-#span_free_div, #arc_free_div {
+#brat-frontend-editor #span_free_div, #arc_free_div {
   float: left;
 }
-fieldset {
+#brat-frontend-editor fieldset {
   /* match relevant parts of jQuery UI .ui-widget-content */
   border: 1px solid #a6c9e2;
   /* round corners, same as jQuery UI .ui-corner-all */
@@ -335,7 +335,7 @@ fieldset {
   /* to prevent border from running into legend */
   margin-top: 5px;
 }
-fieldset legend {
+#brat-frontend-editor fieldset legend {
   font-weight: bold;
   font-size: 90%;
   -moz-border-radius: 3px;
@@ -346,7 +346,7 @@ fieldset legend {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
-.label-like {
+#brat-frontend-editor .label-like {
    /* for UI consistency, this should match the "fieldset legend" style;
       sorry about the duplication. */
   font-family: monospace;
@@ -356,22 +356,22 @@ fieldset legend {
   color: #2e6e9e;
 }   
 
-.accesskey {
+#brat-frontend-editor .accesskey {
   text-decoration: underline;
 }
 
 
-.shadow {
+#brat-frontend-editor .shadow {
   -moz-box-shadow: 5px 5px 5px #444444;
   -webkit-box-shadow: 5px 5px 5px #444444;
   box-shadow: 5px 5px 5px #444444;
 }
 
-#span_selected, #arc_origin, #arc_target {
+#brat-frontend-editor #span_selected, #arc_origin, #arc_target {
   font-weight: bold;
 }
 
-#commentpopup {
+#brat-frontend-editor #commentpopup {
   font-family: 'Liberation Sans', Verdana, Arial, Helvetica, sans-serif;
   position: fixed;
   top: 0;
@@ -393,79 +393,79 @@ fieldset legend {
   border-radius: 3px;
   max-width: 80%;
 }
-#more_info_readme {
+#brat-frontend-editor #more_info_readme {
   height: 350px;
 }
-#readme_container {
+#brat-frontend-editor #readme_container {
   position: relative;
 }
-#more_readme_button {                   
+#brat-frontend-editor #more_readme_button {                   
   padding: 2px 5px;
   position: absolute;
   top: -2px;
   right: -2px;
 }
 
-.comment_id {
+#brat-frontend-editor .comment_id {
   vertical-align: top;
   float:right;
   font-size: 75%;
   font-family: monospace;
   color: #333333;
 }
-.comment_type {
+#brat-frontend-editor .comment_type {
   /* font-weight: bold; */
 }
-.comment_text {
+#brat-frontend-editor .comment_text {
   font-weight: bold;
 }
-.comment_type_id_wrapper {
+#brat-frontend-editor .comment_type_id_wrapper {
   /* padding for floating ID */
   padding-right: 2em;
 }
-.norm_info_label {
+#brat-frontend-editor .norm_info_label {
   font-weight: bold;
   font-size: 80%;
 }
-.norm_info_value {
+#brat-frontend-editor .norm_info_value {
   font-size: 80%;
 }
-.norm_info_img {
+#brat-frontend-editor .norm_info_img {
   float: right;
   margin-left: 1em;
 }
 
-#search_form select {
+#brat-frontend-editor #search_form select {
   width: 100%; /* deal with overflowing selectboxes */
 }
 
-.scroll_fset {
+#brat-frontend-editor .scroll_fset {
   height: 200px;
 }
-.scroll_fset fieldset {
+#brat-frontend-editor .scroll_fset fieldset {
   height: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 /* HACK to display <legend> properly */
-  .scroll_fset {
-    margin-bottom: 2.5em;
-  }
-  .scroll_fset fieldset {
-    padding-bottom: 2em;
-  }
+#brat-frontend-editor .scroll_fset {
+  margin-bottom: 2.5em;
+}
+#brat-frontend-editor .scroll_fset fieldset {
+  padding-bottom: 2em;
+}
 /* end HACK */
-.scroll_fset div.scroller {
+#brat-frontend-editor .scroll_fset div.scroller {
   overflow: auto;
   width: 100%;
   height: 100%;
 }
 
-#span_highlight_link, #arc_highlight_link, #viewspan_highlight_link {
+#brat-frontend-editor #span_highlight_link, #arc_highlight_link, #viewspan_highlight_link {
   float: right;
 }
 
-.unselectable {
+#brat-frontend-editor .unselectable {
    -moz-user-select: -moz-none;
    -khtml-user-select: none;
    -webkit-user-select: none;
@@ -488,43 +488,43 @@ fieldset legend {
 
 /* Apple iPad, iPhone, iPod */
 
-* {
+#brat-frontend-editor * {
    -webkit-tap-highlight-color: rgba(0,0,0,0);
    -webkit-text-size-adjust: none;
    select: none;
 }
 
-.span rect.AddedAnnotation {
+#brat-frontend-editor .span rect.AddedAnnotation {
   stroke: #ff4141;
   stroke-width: 2;
 }
-.shadow_AddedAnnotation {
+#brat-frontend-editor .shadow_AddedAnnotation {
   fill: #ff4141;
 }
-#commentpopup.comment_AddedAnnotation {
+#brat-frontend-editor #commentpopup.comment_AddedAnnotation {
   background-color: #ffcccc;
 }
-.span rect.MissingAnnotation {
+#brat-frontend-editor .span rect.MissingAnnotation {
   stroke: #ffffff;
   stroke-width: 2;
 }
-.shadow_MissingAnnotation {
+#brat-frontend-editor .shadow_MissingAnnotation {
   fill: #ff4141;
   opacity: 0.3;
 }
-#commentpopup.comment_MissingAnnotation {
+#brat-frontend-editor #commentpopup.comment_MissingAnnotation {
   background-color: #ffcccc;
 }
-.span rect.MissingAnnotation + text {
+#brat-frontend-editor .span rect.MissingAnnotation + text {
   opacity: 0.5;
 }
-.span rect.ChangedAnnotation {
+#brat-frontend-editor .span rect.ChangedAnnotation {
   stroke: #ffff99;
   stroke-width: 2;
 }
-.shadow_ChangedAnnotation {
+#brat-frontend-editor .shadow_ChangedAnnotation {
   fill: #ff4141;
 }
-#commentpopup.comment_ChangedAnnotation {
+#brat-frontend-editor #commentpopup.comment_ChangedAnnotation {
   background-color: #ffcccc;
 }

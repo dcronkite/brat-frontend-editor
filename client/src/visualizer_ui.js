@@ -1509,7 +1509,7 @@ var VisualizerUI = (function($, window, undefined) {
           if (response.exception == 'annotationCollectionNotFound' ||
               response.exception == 'collectionNotAccessible') {
               // revert to last good
-              dispatcher.post('setCollection', [lastGoodCollection]);
+            dispatcher.post('setCollection', [lastGoodCollection]);
           } else {
               dispatcher.post('messages', [[['Unknown error: ' + response.exception, 'error']]]);
               dispatcher.post('setCollection', ['/']);

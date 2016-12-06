@@ -407,11 +407,16 @@
             ],
             ajax: 'local',
             activateEdition: true,
-            maxFragmentLength: 30
+            overWriteModals: false,
+            maxFragmentLength: 30,
+            showTooltip: true
         };
 
         function window_onload() {
-            var yolo = new BratFrontendEditor(document.getElementById("yolo"), collData, docData, options);
+            var brat = new BratFrontendEditor(document.getElementById("brat"), collData, docData, options);
+            brat.dispatcher.on('sglclick', function(data) {
+                console.log(data)
+            });
         }
 
 
@@ -419,7 +424,7 @@
 </head>
 <body onLoad="window_onload()">
 
-<div id="yolo"></div>
+<div id="brat"></div>
 
 </body>
 </html>

@@ -13,6 +13,8 @@ window.BratFrontendEditor = function(element, collData, docData, options) {
     //DEFAULT OPTIONS
     newOptions = {
         activateEdition: true,
+        overWriteModals: false,
+        showTooltip: false,
         assetsPath: "static/",
         maxFragmentLength: 30,
         webFontURLs: [
@@ -95,8 +97,8 @@ BratFrontendEditor.prototype = {
                 self.visualizer = new Visualizer(self.dispatcher, 'svg', absoluteWebFontsURLS);
                 self.svg = self.visualizer.svg;
                 if(self.options.activateEdition === true){
-                    self.visualizerUI = new VisualizerUI(self.dispatcher, self.svg);
-                    self.annotatorUI = new AnnotatorUI(self.dispatcher, self.svg);
+                    self.visualizerUI = new VisualizerUI(self.dispatcher, self.svg, self.options.showTooltip);
+                    if(!self.options.overWriteModals) self.annotatorUI = new AnnotatorUI(self.dispatcher, self.svg);
                     self.spinner = new Spinner(self.dispatcher, '#spinner');
                 }
                 self.dispatcher.post('init');

@@ -1,6 +1,10 @@
 {
   "name": "brat-frontend-editor",
+<<<<<<< Updated upstream
   "version": "0.3.18",
+=======
+  "version": "0.3.32",
+>>>>>>> Stashed changes
   "description": "\"BRAT Editor standalone frontend library\"",
   "main": "index.js",
   "scripts": {

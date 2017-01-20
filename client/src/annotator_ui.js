@@ -894,7 +894,7 @@ var AnnotatorUI = (function($, window, undefined) {
         if (reselectedSpan) { // && !Configuration.confirmModeOn) {
           submitReselect();
         } else {
-          dispatcher.post('showForm', [spanForm]);
+          dispatcher.post('showForm', [spanForm, spanOptions]);
           $('#span_form-ok').focus();
           adjustToCursor(evt, spanForm.parent());
         }
@@ -2578,7 +2578,7 @@ var AnnotatorUI = (function($, window, undefined) {
       // hide the waiter (Sampo said it's annoying)
       // we don't elliminate it altogether because it still provides the
       // overlay to prevent interaction
-      $waiter.parent().css('opacity', '0');
+      // $waiter.parent().css('opacity', '0');
 
       var isReloadOkay = function() {
         // do not reload while the user is in the middle of editing

@@ -13,6 +13,8 @@ window.BratFrontendEditor = function(element, collData, docData, options) {
     //DEFAULT OPTIONS
     newOptions = {
         activateEdition: true,
+        overWriteModals: false,
+        showTooltip: false,
         assetsPath: "static/",
         maxFragmentLength: 40,
         showTooltip: true,

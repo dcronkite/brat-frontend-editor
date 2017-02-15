@@ -14,7 +14,9 @@ window.BratFrontendEditor = function(element, collData, docData, options) {
     newOptions = {
         activateEdition: true,
         assetsPath: "static/",
-        maxFragmentLength: 30,
+        maxFragmentLength: 40,
+        showTooltip: true,
+        overWriteModals: false,
         webFontURLs: [
             'fonts/Astloch-Bold.ttf',
             'fonts/PT_Sans-Caption-Web-Regular.ttf',
@@ -95,15 +97,9 @@ BratFrontendEditor.prototype = {
                 self.visualizer = new Visualizer(self.dispatcher, 'svg', absoluteWebFontsURLS);
                 self.svg = self.visualizer.svg;
                 if(self.options.activateEdition === true){
-<<<<<<< Updated upstream
-                    self.visualizerUI = new VisualizerUI(self.dispatcher, self.svg);
-                    self.annotatorUI = new AnnotatorUI(self.dispatcher, self.svg);
-                    self.spinner = new Spinner(self.dispatcher, '#spinner');
-=======
                     self.visualizerUI = new VisualizerUI(self.dispatcher, self.svg, self.options.showTooltip, self.options.overWriteModals);
                     self.annotatorUI = new AnnotatorUI(self.dispatcher, self.svg);
                     // self.spinner = new Spinner(self.dispatcher, '#spinner');
->>>>>>> Stashed changes
                 }
                 self.dispatcher.post('init');
 

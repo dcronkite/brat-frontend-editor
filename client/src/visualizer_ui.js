@@ -1,11 +1,7 @@
 // -*- Mode: JavaScript; tab-width: 2; indent-tabs-mode: nil; -*-
 // vim:set ft=javascript ts=2 sw=2 sts=2 cindent:
 var VisualizerUI = (function($, window, undefined) {
-<<<<<<< Updated upstream
-    var VisualizerUI = function(dispatcher, svg) {
-=======
     var VisualizerUI = function(dispatcher, svg, showTooltip, overWriteModals) {
->>>>>>> Stashed changes
       var that = this;
 
       var messagePostOutFadeDelay = 1000;
@@ -357,9 +353,11 @@ var VisualizerUI = (function($, window, undefined) {
           }
         });
 
-        // display initial comment HTML 
-        displayComment(evt, target, comment, commentText, commentType, 
-                       immediately);
+        // display initial comment HTML
+        if (showTooltip) {
+          displayComment(evt, target, comment, commentText, commentType,
+              immediately);
+        }
 
         // initiate AJAX calls for the normalization data to query
         $.each(normsToQuery, function(normqNo, normq) {

@@ -1,7 +1,7 @@
 // -*- Mode: JavaScript; tab-width: 2; indent-tabs-mode: nil; -*-
 // vim:set ft=javascript ts=2 sw=2 sts=2 cindent:
 var VisualizerUI = (function($, window, undefined) {
-    var VisualizerUI = function(dispatcher, svg, showTooltip) {
+    var VisualizerUI = function(dispatcher, svg, showTooltip, overWriteModals) {
       var that = this;
 
       var messagePostOutFadeDelay = 1000;
@@ -355,9 +355,11 @@ var VisualizerUI = (function($, window, undefined) {
           }
         });
 
-        // display initial comment HTML 
-        displayComment(evt, target, comment, commentText, commentType, 
-                       immediately);
+        // display initial comment HTML
+        if (showTooltip) {
+          displayComment(evt, target, comment, commentText, commentType,
+              immediately);
+        }
 
         // initiate AJAX calls for the normalization data to query
         $.each(normsToQuery, function(normqNo, normq) {
@@ -550,10 +552,12 @@ var VisualizerUI = (function($, window, undefined) {
 
       var showForm = function(form) {
         currentForm = form;
-        // as suggested in http://stackoverflow.com/questions/2657076/jquery-ui-dialog-fixed-positioning
-        form.parent().css({position:"fixed"});
-        form.dialog('open');
-        slideToggle($('#pulldown').stop(), false);
+        if(!overWriteModals){
+          // as suggested in http://stackoverflow.com/questions/2657076/jquery-ui-dialog-fixed-positioning
+          form.parent().css({position:"fixed"});
+          form.dialog('open');
+          slideToggle($('#pulldown').stop(), false);
+        }
         return form;
       };
 

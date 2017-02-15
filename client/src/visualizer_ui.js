@@ -1,7 +1,7 @@
 // -*- Mode: JavaScript; tab-width: 2; indent-tabs-mode: nil; -*-
 // vim:set ft=javascript ts=2 sw=2 sts=2 cindent:
 var VisualizerUI = (function($, window, undefined) {
-    var VisualizerUI = function(dispatcher, svg) {
+    var VisualizerUI = function(dispatcher, svg, showTooltip) {
       var that = this;
 
       var messagePostOutFadeDelay = 1000;
@@ -275,14 +275,16 @@ var VisualizerUI = (function($, window, undefined) {
         }
         commentPopup[0].className = idtype;
         commentPopup.html(comment);
-        adjustToCursor(evt, commentPopup, 10, true, true);
-        clearTimeout(displayCommentTimer);
-        /* slight "tooltip" delay to allow highlights to be seen
+        if(showTooltip) {
+          adjustToCursor(evt, commentPopup, 10, true, true);
+          clearTimeout(displayCommentTimer);
+          /* slight "tooltip" delay to allow highlights to be seen
            before the popup obstructs them. */
-        displayCommentTimer = setTimeout(function() {
-          commentPopup.stop(true, true).fadeIn();
-          commentDisplayed = true;
-        }, immediately ? 0 : 500);
+          displayCommentTimer = setTimeout(function() {
+            commentPopup.stop(true, true).fadeIn();
+            commentDisplayed = true;
+          }, immediately ? 0 : 500);
+        }
       };
 
       // to avoid clobbering on delayed response
@@ -483,7 +485,7 @@ var VisualizerUI = (function($, window, undefined) {
       };
 
       var onMouseMove = function(evt) {
-        if (commentDisplayed) {
+        if (commentDisplayed && showTooltip) {
           adjustToCursor(evt, commentPopup, 10, true, true);
         }
       };
@@ -1509,7 +1511,7 @@ var VisualizerUI = (function($, window, undefined) {
           if (response.exception == 'annotationCollectionNotFound' ||
               response.exception == 'collectionNotAccessible') {
               // revert to last good
-              dispatcher.post('setCollection', [lastGoodCollection]);
+            dispatcher.post('setCollection', [lastGoodCollection]);
           } else {
               dispatcher.post('messages', [[['Unknown error: ' + response.exception, 'error']]]);
               dispatcher.post('setCollection', ['/']);
@@ -1859,6 +1861,16 @@ var VisualizerUI = (function($, window, undefined) {
         element.css({ top: y, left: x });
       };
       var viewspanForm = $('#viewspan_form');
+
+      var onSingleClick = function(evt) {
+        var target = $(evt.target);
+        var id;
+        if (id = target.attr('data-span-id')) {
+          var span = data.spans[id];
+          dispatcher.post('sglclick', [span]);
+        }
+      };
+
       var onDblClick = function(evt) {
         if (user && annotationAvailable) return;
         var target = $(evt.target);
@@ -2251,6 +2263,7 @@ var VisualizerUI = (function($, window, undefined) {
           on('keydown', onKeyDown).
           on('mousemove', onMouseMove).
           on('dblclick', onDblClick).
+          on('click', onSingleClick).
           on('touchstart', onTouchStart).
           on('touchend', onTouchEnd).
           on('resize', onResize).

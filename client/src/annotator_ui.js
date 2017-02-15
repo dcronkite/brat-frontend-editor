@@ -2611,10 +2611,20 @@ var AnnotatorUI = (function($, window, undefined) {
         dispatcher.post('annotationIsAvailable');
       };
 
+      var collectionLoaded = function(collData){
+        coll = collData;
+      };
+
+      var requestRenderData = function(docData) {
+        doc = docData;
+      };
+
       dispatcher.
           on('init', init).
           on('getValidArcTypesForDrag', getValidArcTypesForDrag).
           on('dataReady', rememberData).
+          on('requestRenderData', requestRenderData).
+          on('collectionLoaded', collectionLoaded).
           on('collectionLoaded', rememberSpanSettings).
           on('collectionLoaded', setupTaggerUI).
           on('collectionLoaded', setupNormalizationUI).

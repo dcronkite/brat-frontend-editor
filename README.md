@@ -175,7 +175,7 @@ class ComponentX extends React.Component {
     var elem = document.getElementById("test");
     var collData = { /* ... */ };
     var docData = { /* ... */ };
-    var brat = new BratFrontendEditor(elem, collData, docData);
+    var brat = new window.BratFrontendEditor(elem, collData, docData);
   }
 
   render () {

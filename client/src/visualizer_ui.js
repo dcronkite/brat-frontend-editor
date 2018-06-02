@@ -1445,7 +1445,7 @@ var VisualizerUI = (function($, window, undefined) {
           } else if (evt.ctrlKey &&
                 (code == 'F'.charCodeAt(0) || code == 'G'.charCodeAt(0))) {
             // prevent Ctrl-F/Ctrl-G in forms
-            evt.preventDefault();
+            // evt.preventDefault();
             return false;
           }
           return;
@@ -1463,7 +1463,7 @@ var VisualizerUI = (function($, window, undefined) {
         } else if (evt.shiftKey && code === $.ui.keyCode.DOWN) {
           autoPaging(false);
         } else if (evt.ctrlKey && code == 'F'.charCodeAt(0)) {
-          evt.preventDefault();
+          // evt.preventDefault();
           showSearchForm();
         } else if (searchActive && evt.ctrlKey && code == 'G'.charCodeAt(0)) {
           evt.preventDefault();

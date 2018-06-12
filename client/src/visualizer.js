@@ -227,6 +227,7 @@ var Visualizer = (function($, window, undefined) {
             'normalizations',
             'relations',
             'triggers',
+            'highlightDict',
         ], function(attrNo, attr) {
             if (sourceData[attr] === undefined) {
                 sourceData[attr] = [];
@@ -2505,9 +2506,6 @@ var Visualizer = (function($, window, undefined) {
             $.each(data.chunks, function(chunkNo, chunk) {
                 // context for sort
                 currentChunk = chunk;
-                if (currentChunk === undefined) {
-                    return;
-                }
                 // text rendering
                 $.each(sourceData.highlightDict || [], function(num, dd) {
                     if (chunk.text.toLowerCase().search(dd.term) !== -1) {
